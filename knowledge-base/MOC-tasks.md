@@ -15,7 +15,7 @@ Hub for all active development work.
 
 ## Project Roadmap (Migration Phases)
 - [x] [[task-phase-0-scaffold]]
-- [ ] [[task-phase-1-copy-logic]]
+- [x] [[task-phase-1-copy-logic]]
 - [ ] [[task-phase-2-registries]]
 - [ ] [[task-phase-3-data-attachments]]
 - [ ] [[task-phase-4-core-action-loop]]
