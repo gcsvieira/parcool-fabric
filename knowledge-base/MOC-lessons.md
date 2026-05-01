@@ -13,4 +13,6 @@ Process insights and technical debt records.
 - [[lesson-fabric-version-hell]]
 - [[lesson-mojang-mappings-evolution]]
 - [[lesson-logic-migration-fabric]]
+- [[lesson-phase-2-registry-evolution]]
+- [[lesson-rendertype-vs-chunksectionlayer]]
 - [[12-ai-agent-guide]]

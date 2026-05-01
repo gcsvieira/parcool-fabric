@@ -21,7 +21,7 @@ updated: 2026-05-01
 ## Project Status
 
 - **Source:** NeoForge 1.21.11 (v21.11.42)
-- **Target:** Fabric 1.21.11
+- **Target:** Fabric 1.21.11 ("Mounts of Mayhem" Update)
 - **Ported by:** [glhrm](https://github.com/glhrm)
 - **Completion:** 25% (Phase 1: Pure Logic Complete)
 

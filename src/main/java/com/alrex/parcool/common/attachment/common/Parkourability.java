@@ -7,7 +7,7 @@ public class Parkourability {
     private final ActionInfo actionInfo = new ActionInfo();
 
     public static Parkourability get(Player player) {
-        return new Parkourability(); // Temporary stub
+        return ((com.alrex.parcool.common.data.ParkourabilityAccess) player).parcool$getParkourability();
     }
 
     public ActionInfo getActionInfo() {

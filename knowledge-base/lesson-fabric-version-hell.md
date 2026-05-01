@@ -1,37 +1,34 @@
 ---
+id: lesson-fabric-version-hell
 type: lesson
 tags: [fabric, gradle, versioning, minecraft-1-21-11]
 links: ["[[MOC-lessons]]"]
 ---
 
-# Lesson: Fabric Version Alignment (1.21.11)
+# Lesson: Fabric Version Alignment (1.21.11 "Mounts of Mayhem")
 
-## Context
-During the bootstrap of the ParCool Fabric port, we encountered significant build failures related to "unpick version" and "Javadoc intermediary namespace" conflicts.
+**Context:** The project targets Minecraft `1.21.11`, which was released on December 9, 2025. This version represents a significant technical milestone in the Java Edition.
 
-## The Problem
-1. **Misreading Metadata:** The target version `1.21.11` was initially misread as `1.21.1`.
-2. **Toolchain Mismatch:** `1.21.11` is a transitional "obfuscated" version that requires specific toolchain alignments:
-    - **Loom:** `1.16-SNAPSHOT`.
-    - **Plugin ID:** `net.fabricmc.fabric-loom-remap` (specifically for obfuscated versions).
-    - **Gradle:** `8.14`.
+## 🧠 Technical Discoveries
 
-## The "Version Tetris" Trap
-Guessing version combinations based on "standard" patterns (e.g., assuming 1.21.1 patterns work for 1.21.11) leads to:
-- `UnsupportedOperationException: Unsupported unpick version`
-- `IllegalStateException: Javadoc must have an intermediary source namespace`
+### 1. The 1.21.11 API Shift
+`1.21.11` is NOT a minor patch of 1.21.1. It is the "Mounts of Mayhem" update and includes:
+- **Data Pack 94.1**: Massive internal serialization changes.
+- **Serialization**: Transitioned fully to `ValueInput` and `ValueOutput` interfaces for `BlockEntity` and `Entity` data, preceding the complete removal of obfuscated code in later versions.
+- **Mandatory Codecs**: Blocks now strictly require `MapCodec` for registration.
+- **Properties-Based Logic**: Many behaviors previously handled by overridable methods (like Piston Push Reactions) are now baked into `BlockBehaviour.Properties`.
 
-## The Fix (Ground Truth)
-When in doubt, bypass searches and manual guesses. Go directly to the **[Official Fabric Template Generator](https://fabricmc.net/develop/template/)**.
-
-### Verified Stack for 1.21.11:
+### 2. Toolchain Alignment
+For `1.21.11`, the verified toolchain is:
 - **Minecraft:** `1.21.11`
-- **Yarn Mappings:** `1.21.11+build.5`
-- **Loom Plugin:** `1.16-SNAPSHOT`
-- **Plugin ID:** `net.fabricmc.fabric-loom-remap`
-- **Loader:** `0.19.2`
+- **Yarn Mappings:** `1.21.11+build.5` (or equivalent)
 - **Fabric API:** `0.141.3+1.21.11`
-- **Gradle:** `8.14`
+- **Java:** 21
 
-## Conclusion
-Always pull versioning from the live generator for non-standard Minecraft subversions. Do not assume minor versions share the same toolchain requirements.
+### 3. Registry Patterns
+- Use `BuiltInRegistries` directly for all `Registry.register` calls.
+- `Registry.registerForHolder` is essential for sound and attribute management to ensure proper `Holder<T>` wrapping.
+
+## 🛠️ Process Correction
+- **Mistake:** Initially assumed `1.21.11` was a minor variation of `1.21.1`.
+- **Correction:** `1.21.11` is a major technical update. Always check release notes for versions with double-digit minor numbers (e.g., `.11`), as they often signal a feature-complete branch before a major engine change.

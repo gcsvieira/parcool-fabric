@@ -10,10 +10,10 @@ links: ["[[MOC-tasks]]"]
 **Goal:** Implement a Fabric-equivalent to NeoForge Data Attachments using Mixins.
 
 ## Goals
-- [ ] Create `ParkourabilityAccess` interface
-- [ ] Create `PlayerDataMixin` for persistent field injection into `Player`
-- [ ] Refactor `Parkourability.java` to use Mixin access
-- [ ] Wire up data persistence (NBT save/load) via Mixin hooks
+- [x] Create `ParkourabilityAccess` interface → verify: [ParkourabilityAccess.java]
+- [x] Create `PlayerDataMixin` for persistent field injection into `Player` → verify: [PlayerDataMixin.java]
+- [x] Refactor `Parkourability.java` to use Mixin access → verify: [Parkourability.java]
+- [x] Wire up data persistence (NBT save/load) via Mixin hooks → verify: [ValueInput/Output in PlayerDataMixin]
 
 ## Verification
 - [ ] `Parkourability.get(player)` returns a valid instance
