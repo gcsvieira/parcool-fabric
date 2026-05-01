@@ -2,7 +2,7 @@ package com.alrex.parcool.common.zipline.impl;
 
 import com.alrex.parcool.common.zipline.Zipline;
 import net.minecraft.util.Mth;
-import net.minecraft.world.phys.AABB;
+
 import net.minecraft.world.phys.Vec3;
 
 public class StraightZipline extends Zipline {
@@ -23,7 +23,7 @@ public class StraightZipline extends Zipline {
         return getOffsetToEndFromStart().scale(t);
     }
 
-    private final float slope = (float) (getOffsetToEndFromStart().y() * Mth.fastInvSqrt(
+    private final float slope = (float) (getOffsetToEndFromStart().y() / Math.sqrt(
             getOffsetToEndFromStart().x() * getOffsetToEndFromStart().x()
                     + getOffsetToEndFromStart().z() * getOffsetToEndFromStart().z()
     ));

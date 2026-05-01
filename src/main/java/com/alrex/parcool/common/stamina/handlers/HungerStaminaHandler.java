@@ -3,7 +3,7 @@ package com.alrex.parcool.common.stamina.handlers;
 import com.alrex.parcool.common.attachment.common.ReadonlyStamina;
 // import com.alrex.parcool.common.network.payload.StaminaProcessOnServerPayload;
 import com.alrex.parcool.common.stamina.IParCoolStaminaHandler;
-import com.alrex.parcool.common.stamina.StaminaType;
+
 import net.minecraft.world.entity.player.Player;
 
 public class HungerStaminaHandler implements IParCoolStaminaHandler {

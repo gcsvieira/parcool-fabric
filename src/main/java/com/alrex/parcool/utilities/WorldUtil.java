@@ -256,6 +256,8 @@ public class WorldUtil {
 				case Z:
 					axis = HangDown.BarAxis.Z;
 					break;
+				default:
+					break; // Y axis: not hangable
 			}
 		} else if (block instanceof EndRodBlock) {
 			if (state.isCollisionShapeFullBlock(entity.level(), pos)) {
@@ -270,6 +272,9 @@ public class WorldUtil {
 				case NORTH:
 				case SOUTH:
 					axis = HangDown.BarAxis.Z;
+					break;
+				default:
+					break; // UP/DOWN: not hangable
 			}
 		} else if (block instanceof CrossCollisionBlock) {
 			int zCount = 0;
@@ -389,8 +394,6 @@ public class WorldUtil {
 
 	@Nullable
 	public static Vec3 getGrabbableWall(LivingEntity entity) {
-		final double d = entity.getBbWidth() * 0.5;
-        Level world = entity.level();
 		double distance = entity.getBbWidth() / 2;
 		double baseLine1 = entity.getEyeHeight() + (entity.getBbHeight() - entity.getEyeHeight()) / 2;
 		double baseLine2 = entity.getBbHeight() + (entity.getBbHeight() - entity.getEyeHeight()) / 2;

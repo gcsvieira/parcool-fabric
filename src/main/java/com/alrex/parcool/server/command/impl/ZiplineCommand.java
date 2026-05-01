@@ -55,7 +55,7 @@ public class ZiplineCommand {
             context.getSource().sendFailure(Component.translatable("parcool.command.message.hookTooFar"));
         }
         double verticalDist = Math.abs(hook2.getY() - hook1.getY());
-        if (verticalDist * Mth.fastInvSqrt(horizontalDistSqr) > 1. || verticalDist > Zipline.MAXIMUM_VERTICAL_DISTANCE) {
+        if (verticalDist / Math.sqrt(horizontalDistSqr) > 1. || verticalDist > Zipline.MAXIMUM_VERTICAL_DISTANCE) {
             context.getSource().sendFailure(Component.translatable("parcool.command.message.ziplineTooSteep"));
         }
         var entity = level.getBlockEntity(hook1);

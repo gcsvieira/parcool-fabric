@@ -8,7 +8,6 @@ public class GeneralQuadraticCurveZipline extends Zipline {
 
     public GeneralQuadraticCurveZipline(Vec3 point1, Vec3 point2, double lowestPointOffset) {
         super(point1, point2);
-        double straightDistance = Math.hypot(getHorizontalDistance(), getOffsetToEndFromStart().y());
         double yOffsetAtVertex = Math.abs(lowestPointOffset);
 
         tAtVertex = Math.abs(getOffsetToEndFromStart().y()) < 0.005 ?

@@ -1,7 +1,7 @@
 package com.alrex.parcool.client.renderer.entity;
 
 import com.alrex.parcool.client.renderer.ModRenderTypes;
-import net.minecraft.client.renderer.rendertype.RenderType;
+
 import com.alrex.parcool.common.entity.zipline.ZiplineRopeEntity;
 import com.alrex.parcool.common.zipline.Zipline;
 import com.alrex.parcool.config.ParCoolConfig;

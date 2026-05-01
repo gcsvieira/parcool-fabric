@@ -25,8 +25,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.util.function.Consumer;
 
 public class ZiplineRopeItem extends Item {
@@ -36,13 +34,7 @@ public class ZiplineRopeItem extends Item {
     }
 
     public static final int DEFAULT_COLOR = 0xFF4C7FE6;
-    private static final DecimalFormat PERCENT_FORMATTER;
 
-    static {
-        DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
-        decimalFormatSymbols.setGroupingSeparator(' ');
-        PERCENT_FORMATTER = new DecimalFormat("##0.0", decimalFormatSymbols);
-    }
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> tooltipAdder, TooltipFlag flag) {
@@ -80,7 +72,7 @@ public class ZiplineRopeItem extends Item {
                     return InteractionResult.FAIL;
                 } else {
                     double verticalDist = Math.abs(end.getY() - start.getY());
-                    if (verticalDist * Mth.fastInvSqrt(horizontalDistSqr) > 1. || verticalDist > Zipline.MAXIMUM_VERTICAL_DISTANCE) {
+                    if (verticalDist / Math.sqrt(horizontalDistSqr) > 1. || verticalDist > Zipline.MAXIMUM_VERTICAL_DISTANCE) {
                         if (context.getLevel().isClientSide()) {
                             Player player = context.getPlayer();
                             if (player != null) {

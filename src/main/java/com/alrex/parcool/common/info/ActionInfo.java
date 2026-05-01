@@ -4,7 +4,7 @@ import com.alrex.parcool.common.action.Action;
 // import com.alrex.parcool.common.attachment.client.LocalStamina;
 import com.alrex.parcool.common.stamina.StaminaType;
 import com.alrex.parcool.config.ParCoolConfig;
-import net.minecraft.world.entity.player.Player;
+
 
 public class ActionInfo {
     public ActionInfo() {
