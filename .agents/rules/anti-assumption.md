@@ -1,0 +1,1 @@
+/home/glhrm/.local/share/agnman/rules/anti-assumption.md

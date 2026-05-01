@@ -1,0 +1,1 @@
+/home/glhrm/.local/share/agnman/rules/antigravity-rtk-rules.md
