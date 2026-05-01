@@ -6,6 +6,18 @@
       "sourceType": "github",
       "skillPath": "caveman/SKILL.md",
       "computedHash": "259cb6ef69b4e9eeb07155c925ce9895ed509b0feb6a7e29cbc9e70d3c7bcfb2"
+    },
+    "minecraft-fabric-dev": {
+      "source": "mcdxai/meteor-rejects-v2",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/minecraft-fabric-dev/SKILL.md",
+      "computedHash": "6f5f6e2edca415ba7fb2b57228f66f2cbc35154a79c4c69bd16d6183d8063c3d"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "computedHash": "72e9ab72627e4fd8ed26a582e82309a98ecdc4f6e1c99418430ac05682c9e91d"
     }
   }
 }

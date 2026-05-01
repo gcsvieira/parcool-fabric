@@ -16,5 +16,5 @@ links: ["[[MOC-tasks]]"]
 - [x] Wire up data persistence (NBT save/load) via Mixin hooks → verify: [ValueInput/Output in PlayerDataMixin]
 
 ## Verification
-- [ ] `Parkourability.get(player)` returns a valid instance
-- [ ] Data persists across player sessions (re-log)
+- [x] `Parkourability.get(player)` returns a valid instance
+- [x] Data persists across player sessions (re-log)

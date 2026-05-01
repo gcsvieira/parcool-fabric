@@ -1,6 +1,7 @@
 package com.alrex.parcool.server.command;
 
 import com.alrex.parcool.ParCool;
+import com.alrex.parcool.server.command.impl.DebugCommand;
 import com.alrex.parcool.server.command.impl.ZiplineCommand;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.commands.CommandSourceStack;
@@ -11,6 +12,7 @@ public class CommandRegistry {
         dispatcher.register(
                 Commands.literal(ParCool.MOD_ID)
                         .then(ZiplineCommand.getBuilder())
+                        .then(DebugCommand.getBuilder())
                 // ControlLimitationCommand will be added after Limitation system is ported in Phase 3
         );
     }
