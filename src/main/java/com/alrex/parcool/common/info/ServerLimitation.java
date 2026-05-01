@@ -14,7 +14,7 @@ public abstract class ServerLimitation {
     private static class Default extends ServerLimitation {
         @Override
         public boolean isPermitted(Class<? extends Action> action) {
-            return false;
+            return true;
         }
 
         @Override

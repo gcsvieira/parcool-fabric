@@ -16,3 +16,5 @@ Process insights and technical debt records.
 - [[lesson-phase-2-registry-evolution]]
 - [[lesson-rendertype-vs-chunksectionlayer]]
 - [[12-ai-agent-guide]]
+- [[lesson-session-4-stability]]
+- [[lesson-session-5-rendering-and-recipes]]

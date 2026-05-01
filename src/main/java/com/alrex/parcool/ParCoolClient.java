@@ -18,5 +18,16 @@ public class ParCoolClient implements ClientModInitializer {
         // Block Render Layers
         BlockRenderLayerMap.putBlock(Blocks.WOODEN_ZIPLINE_HOOK, ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(Blocks.IRON_ZIPLINE_HOOK, ChunkSectionLayer.CUTOUT);
+
+        net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.registerGlobalReceiver(com.alrex.parcool.common.network.payload.ActionStatePayload.TYPE, com.alrex.parcool.common.network.payload.ActionStatePayload::handleClient);
+        
+        com.alrex.parcool.client.input.KeyBindings.register();
+
+        net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (client.player != null) {
+                com.alrex.parcool.client.input.KeyRecorder.onClientTick();
+            }
+            com.alrex.parcool.common.action.ActionProcessor.ClientActionProcessor.onRenderTick(1.0f);
+        });
     }
 }

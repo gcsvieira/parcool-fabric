@@ -1,0 +1,1008 @@
+
+> Configure project :
+Fabric Loom: 1.16.1
+
+> Task :compileJava FAILED
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:7: error: cannot find symbol
+import com.alrex.parcool.common.attachment.Attachments;
+                                          ^
+  symbol:   class Attachments
+  location: package com.alrex.parcool.common.attachment
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:11: error: cannot find symbol
+import com.alrex.parcool.common.network.payload.ClientInformationPayload;
+                                               ^
+  symbol:   class ClientInformationPayload
+  location: package com.alrex.parcool.common.network.payload
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/Animator.java:64: error: cannot find symbol
+            RenderFrameEvent event,
+            ^
+  symbol:   class RenderFrameEvent
+  location: class Animator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:15: error: cannot find symbol
+	private final Roll.Direction direction;
+	                  ^
+  symbol:   class Direction
+  location: class Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:17: error: cannot find symbol
+	public RollAnimator(Roll.Direction direction) {
+	                        ^
+  symbol:   class Direction
+  location: class Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:285: error: cannot find symbol
+	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+	                          ^
+  symbol:   class CameraState
+  location: class RollAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:300: error: cannot find symbol
+	void onCameraSetUpFrontBack(CameraState event, Player clientPlayer, Parkourability parkourability) {
+	                            ^
+  symbol:   class CameraState
+  location: class RollAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:313: error: cannot find symbol
+	void onCameraSetUpLeftRight(CameraState event, Player clientPlayer, Parkourability parkourability) {
+	                            ^
+  symbol:   class CameraState
+  location: class RollAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:334: error: cannot find symbol
+	public void onRenderTick(RenderFrameEvent event, Player player, Parkourability parkourability) {
+	                         ^
+  symbol:   class RenderFrameEvent
+  location: class RollAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:73: error: cannot find symbol
+	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+	                          ^
+  symbol:   class CameraState
+  location: class HangAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HorizontalWallRunAnimator.java:96: error: cannot find symbol
+	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+	                          ^
+  symbol:   class CameraState
+  location: class HorizontalWallRunAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:109: error: cannot find symbol
+	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+	                          ^
+  symbol:   class CameraState
+  location: class SpeedVaultAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ExaggeratedSideDodgeAnimator.java:19: error: cannot find symbol
+	final Dodge.DodgeDirection direction;
+	           ^
+  symbol:   class DodgeDirection
+  location: class Dodge
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ExaggeratedSideDodgeAnimator.java:21: error: cannot find symbol
+	public ExaggeratedSideDodgeAnimator(Dodge.DodgeDirection dodgeDirection) {
+	                                         ^
+  symbol:   class DodgeDirection
+  location: class Dodge
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ExaggeratedSideDodgeAnimator.java:149: error: cannot find symbol
+    public void onRenderTick(RenderFrameEvent event, Player player, Parkourability parkourability) {
+                             ^
+  symbol:   class RenderFrameEvent
+  location: class ExaggeratedSideDodgeAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:6: error: package com.alrex.parcool.client.input does not exist
+import com.alrex.parcool.client.input.KeyBindings;
+                                     ^
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:15: error: package javax.annotation does not exist
+import javax.annotation.Nullable;
+                       ^
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/BackwardWallJumpAnimator.java:113: error: cannot find symbol
+	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+	                          ^
+  symbol:   class CameraState
+  location: class BackwardWallJumpAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RideZiplineAnimator.java:62: error: cannot find symbol
+    public void onRenderTick(RenderFrameEvent event, Player player, Parkourability parkourability) {
+                             ^
+  symbol:   class RenderFrameEvent
+  location: class RideZiplineAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:19: error: cannot find symbol
+	final Dodge.DodgeDirection direction;
+	           ^
+  symbol:   class DodgeDirection
+  location: class Dodge
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:21: error: cannot find symbol
+	public DodgeAnimator(Dodge.DodgeDirection dodgeDirection) {
+	                          ^
+  symbol:   class DodgeDirection
+  location: class Dodge
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:300: error: cannot find symbol
+	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+	                          ^
+  symbol:   class CameraState
+  location: class DodgeAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:336: error: cannot find symbol
+    public void onRenderTick(RenderFrameEvent event, Player player, Parkourability parkourability) {
+                             ^
+  symbol:   class RenderFrameEvent
+  location: class DodgeAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/KongVaultAnimator.java:122: error: cannot find symbol
+	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+	                          ^
+  symbol:   class CameraState
+  location: class KongVaultAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/FlippingAnimator.java:15: error: cannot find symbol
+    public FlippingAnimator(Flipping.Direction direction) {
+                                    ^
+  symbol:   class Direction
+  location: class Flipping
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/FlippingAnimator.java:19: error: cannot find symbol
+    private final Flipping.Direction direction;
+                          ^
+  symbol:   class Direction
+  location: class Flipping
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/FlippingAnimator.java:161: error: cannot find symbol
+	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+	                          ^
+  symbol:   class CameraState
+  location: class FlippingAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/PassiveCustomAnimation.java:3: error: package com.alrex.parcool.client.input does not exist
+import com.alrex.parcool.client.input.KeyBindings;
+                                     ^
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/client/LocalStamina.java:4: error: cannot find symbol
+import com.alrex.parcool.common.attachment.Attachments;
+                                          ^
+  symbol:   class Attachments
+  location: package com.alrex.parcool.common.attachment
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/client/LocalStamina.java:5: error: cannot find symbol
+import com.alrex.parcool.common.attachment.ClientAttachments;
+                                          ^
+  symbol:   class ClientAttachments
+  location: package com.alrex.parcool.common.attachment
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/client/Animation.java:10: error: cannot find symbol
+import com.alrex.parcool.common.attachment.ClientAttachments;
+                                          ^
+  symbol:   class ClientAttachments
+  location: package com.alrex.parcool.common.attachment
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/client/Animation.java:89: error: cannot find symbol
+	public void onRenderTick(RenderFrameEvent event, Player player, Parkourability parkourability) {
+	                         ^
+  symbol:   class RenderFrameEvent
+  location: class Animation
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/ActionProcessor.java:4: error: cannot find symbol
+import com.alrex.parcool.common.attachment.Attachments;
+                                          ^
+  symbol:   class Attachments
+  location: package com.alrex.parcool.common.attachment
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/network/payload/ActionStatePayload.java:8: error: cannot find symbol
+import com.alrex.parcool.common.network.ActionSynchronizationBroadcaster;
+                                       ^
+  symbol:   class ActionSynchronizationBroadcaster
+  location: package com.alrex.parcool.common.network
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/network/payload/ActionStatePayload.java:81: error: cannot find symbol
+    public static void handleClient(ActionStatePayload payload, IPayloadContext context) {
+                                                                ^
+  symbol:   class IPayloadContext
+  location: class ActionStatePayload
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/network/payload/ActionStatePayload.java:92: error: cannot find symbol
+    public static void handleServer(ActionStatePayload payload, IPayloadContext context) {
+                                                                ^
+  symbol:   class IPayloadContext
+  location: class ActionStatePayload
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/api/unstable/animation/ParCoolAnimationInfoEvent.java:5: error: package net.neoforged.bus.api does not exist
+import net.neoforged.bus.api.Event;
+                            ^
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/api/unstable/animation/ParCoolAnimationInfoEvent.java:8: error: cannot find symbol
+public class ParCoolAnimationInfoEvent extends Event {
+                                               ^
+  symbol: class Event
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:23: error: cannot find symbol
+	@Nullable
+	 ^
+  symbol:   class Nullable
+  location: class DiveAnimationHostAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:94: error: cannot find symbol
+		if (server.AdvantageousValue) {
+		          ^
+  symbol:   variable AdvantageousValue
+  location: variable server of type Booleans
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:102: error: cannot find symbol
+		if (server.Advantageous == ParCoolConfig.AdvantageousDirection.Higher) {
+		          ^
+  symbol:   variable Advantageous
+  location: variable server of type Integers
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:110: error: cannot find symbol
+		if (server.Advantageous == ParCoolConfig.AdvantageousDirection.Higher) {
+		          ^
+  symbol:   variable Advantageous
+  location: variable server of type Doubles
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:120: error: cannot find symbol
+		net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.send(new ClientInformationPayload(player.getUUID(), true, parkourability.getClientInfo()));
+		                                                                           ^
+  symbol:   class ClientInformationPayload
+  location: class Parkourability
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/PlayerModelTransformer.java:29: error: cannot find symbol
+		return state.partialTick;
+		            ^
+  symbol:   variable partialTick
+  location: variable state of type AvatarRenderState
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SlidingAnimator.java:51: error: cannot find symbol
+        Vec3 vec = parkourability.get(Slide.class).getSlidingVector();
+                                                  ^
+  symbol:   method getSlidingVector()
+  location: class Slide
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HideInBlockAnimator.java:58: error: cannot find symbol
+        Vec3 lookVec = parkourability.get(HideInBlock.class).getLookDirection();
+                                                            ^
+  symbol:   method getLookDirection()
+  location: class HideInBlock
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:48: error: cannot find symbol
+		float phase = (getTick() + transformer.getPartialTick()) / roll.getRollMaxTick();
+		                                                               ^
+  symbol:   method getRollMaxTick()
+  location: variable roll of type Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:74: error: cannot find symbol
+		float phase = (getTick() + transformer.getPartialTick()) / roll.getRollMaxTick();
+		                                                               ^
+  symbol:   method getRollMaxTick()
+  location: variable roll of type Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:83: error: cannot find symbol
+		if (direction == Roll.Direction.Left) {
+		                     ^
+  symbol:   variable Direction
+  location: class Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:214: error: cannot find symbol
+		float phase = (getTick() + rotator.getPartialTick()) / roll.getRollMaxTick();
+		                                                           ^
+  symbol:   method getRollMaxTick()
+  location: variable roll of type Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:217: error: cannot find symbol
+		float sign = direction == Roll.Direction.Front ? 1 : -1;
+		                              ^
+  symbol:   variable Direction
+  location: class Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:219: error: cannot find symbol
+        if (direction == Roll.Direction.Front) {
+                             ^
+  symbol:   variable Direction
+  location: class Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:239: error: cannot find symbol
+		float phase = (getTick() + rotator.getPartialTick()) / parkourability.get(Roll.class).getRollMaxTick();
+		                                                                                     ^
+  symbol:   method getRollMaxTick()
+  location: class Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:264: error: cannot find symbol
+				if (direction == Roll.Direction.Left) {
+				                     ^
+  symbol:   variable Direction
+  location: class Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:302: error: cannot find symbol
+		float sign = direction == Roll.Direction.Front ? 1 : -1;
+		                              ^
+  symbol:   variable Direction
+  location: class Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:306: error: cannot find symbol
+				ParCoolConfig.Client.Booleans.EnableCameraAnimationOfRolling.get()
+				                             ^
+  symbol:   variable EnableCameraAnimationOfRolling
+  location: class Booleans
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:308: error: cannot find symbol
+			float factor = calculateMovementFactor((float) ((roll.getDoingTick() + event.getPartialTick()) / (float) roll.getRollMaxTick()));
+			                                                                                                             ^
+  symbol:   method getRollMaxTick()
+  location: variable roll of type Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:314: error: cannot find symbol
+		float phase = (float) ((getTick() + event.getPartialTick()) / parkourability.get(Roll.class).getRollMaxTick());
+		                                                                                            ^
+  symbol:   method getRollMaxTick()
+  location: class Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:321: error: cannot find symbol
+				ParCoolConfig.Client.Booleans.EnableCameraAnimationOfRolling.get()
+				                             ^
+  symbol:   variable EnableCameraAnimationOfRolling
+  location: class Booleans
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:326: error: cannot find symbol
+			if (direction == Roll.Direction.Right)
+			                     ^
+  symbol:   variable Direction
+  location: class Roll
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:20: error: cannot find symbol
+		HangDown.BarAxis axis = hangDown.getHangingBarAxis();
+		                                ^
+  symbol:   method getHangingBarAxis()
+  location: variable hangDown of type HangDown
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:22: error: cannot find symbol
+		boolean orthogonal = hangDown.isOrthogonalToBar();
+		                             ^
+  symbol:   method isOrthogonalToBar()
+  location: variable hangDown of type HangDown
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:27: error: cannot find symbol
+			float zAngle = (float) Math.toRadians(10 + 20 * Math.sin(24 * hangDown.getArmSwingAmount()));
+			                                                                      ^
+  symbol:   method getArmSwingAmount()
+  location: variable hangDown of type HangDown
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:40: error: cannot find symbol
+			float xAngle = (float) Math.toRadians(180 + 25 * Math.sin(24 * hangDown.getArmSwingAmount()));
+			                                                                       ^
+  symbol:   method getArmSwingAmount()
+  location: variable hangDown of type HangDown
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:61: error: cannot find symbol
+		return (float) (-hangDown.getBodySwingAngleFactor() * 40 * Math.sin((hangDown.getDoingTick() + partialTick) / 10 * Math.PI));
+		                         ^
+  symbol:   method getBodySwingAngleFactor()
+  location: variable hangDown of type HangDown
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:76: error: cannot find symbol
+				!ParCoolConfig.Client.Booleans.EnableCameraAnimationOfHangDown.get()
+				                              ^
+  symbol:   variable EnableCameraAnimationOfHangDown
+  location: class Booleans
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HorizontalWallRunAnimator.java:98: error: cannot find symbol
+				!ParCoolConfig.Client.Booleans.EnableCameraAnimationOfHWallRun.get()
+				                              ^
+  symbol:   variable EnableCameraAnimationOfHWallRun
+  location: class Booleans
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:20: error: cannot find symbol
+		return getTick() >= Vault.MAX_TICK;
+		                         ^
+  symbol:   variable MAX_TICK
+  location: class Vault
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:24: error: cannot find symbol
+		float phase = tick / Vault.MAX_TICK;
+		                          ^
+  symbol:   variable MAX_TICK
+  location: class Vault
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:34: error: cannot find symbol
+		float phase = (getTick() + rotator.getPartialTick()) / Vault.MAX_TICK;
+		                                                            ^
+  symbol:   variable MAX_TICK
+  location: class Vault
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:51: error: cannot find symbol
+		float phase = (getTick() + transformer.getPartialTick()) / Vault.MAX_TICK;
+		                                                                ^
+  symbol:   variable MAX_TICK
+  location: class Vault
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:111: error: cannot find symbol
+				!ParCoolConfig.Client.Booleans.EnableCameraAnimationOfVault.get()) return;
+				                              ^
+  symbol:   variable EnableCameraAnimationOfVault
+  location: class Booleans
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:113: error: cannot find symbol
+		float phase = (float) ((getTick() + event.getPartialTick()) / Vault.MAX_TICK);
+		                                                                   ^
+  symbol:   variable MAX_TICK
+  location: class Vault
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/JumpChargingAnimator.java:15: error: cannot find symbol
+        return !c.isCharging();
+                 ^
+  symbol:   method isCharging()
+  location: variable c of type ChargeJump
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/JumpChargingAnimator.java:62: error: cannot find symbol
+        partialTick *= (parkourability.get(ChargeJump.class).getNotChargingTick() == 0 ? 1 : -1);
+                                                            ^
+  symbol:   method getNotChargingTick()
+  location: class ChargeJump
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/JumpChargingAnimator.java:63: error: cannot find symbol
+        float transitionPhase = Math.min(1f, (parkourability.get(ChargeJump.class).getChargingTick() + partialTick) / ChargeJump.JUMP_MAX_CHARGE_TICK);
+                                                                                  ^
+  symbol:   method getChargingTick()
+  location: class ChargeJump
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/JumpChargingAnimator.java:63: error: cannot find symbol
+        float transitionPhase = Math.min(1f, (parkourability.get(ChargeJump.class).getChargingTick() + partialTick) / ChargeJump.JUMP_MAX_CHARGE_TICK);
+                                                                                                                                ^
+  symbol:   variable JUMP_MAX_CHARGE_TICK
+  location: class ChargeJump
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/FastRunningAnimator.java:138: error: cannot find symbol
+		if (parkourability.getClientInfo().get(ParCoolConfig.Client.Booleans.EnableLeanAnimationOfFastRun)) {
+		                                                                    ^
+  symbol:   variable EnableLeanAnimationOfFastRun
+  location: class Booleans
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ClingToCliffAnimator.java:22: error: cannot find symbol
+		switch (parkourability.get(ClingToCliff.class).getFacingDirection()) {
+		                                              ^
+  symbol:   method getFacingDirection()
+  location: class ClingToCliff
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ClingToCliffAnimator.java:24: error: cannot find symbol
+				double zAngle = 10 + 20 * Math.sin(24 * parkourability.get(ClingToCliff.class).getArmSwingAmount());
+				                                                                              ^
+  symbol:   method getArmSwingAmount()
+  location: class ClingToCliff
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ClingToCliffAnimator.java:67: error: cannot find symbol
+		switch (cling.getFacingDirection()) {
+		             ^
+  symbol:   method getFacingDirection()
+  location: variable cling of type ClingToCliff
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:171: error: cannot find symbol
+            if (KeyBindings.isKeyForwardDown()) {
+                ^
+  symbol:   variable KeyBindings
+  location: class SkyDiveAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:172: error: cannot find symbol
+                if (KeyBindings.isKeyBackDown()) {
+                    ^
+  symbol:   variable KeyBindings
+  location: class SkyDiveAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:178: error: cannot find symbol
+            } else if (KeyBindings.isKeyBackDown()) {
+                       ^
+  symbol:   variable KeyBindings
+  location: class SkyDiveAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:184: error: cannot find symbol
+            if (KeyBindings.isKeyRightDown()) {
+                ^
+  symbol:   variable KeyBindings
+  location: class SkyDiveAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:185: error: cannot find symbol
+                if (KeyBindings.isKeyLeftDown()) {
+                    ^
+  symbol:   variable KeyBindings
+  location: class SkyDiveAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:191: error: cannot find symbol
+            } else if (KeyBindings.isKeyLeftDown()) {
+                       ^
+  symbol:   variable KeyBindings
+  location: class SkyDiveAnimator
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:301: error: cannot find symbol
+			double ySpeed = parkourability.get(Dive.class).getPlayerYSpeed(transformer.getPartialTick());
+			                                              ^
+  symbol:   method getPlayerYSpeed(float)
+  location: class Dive
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:319: error: cannot find symbol
+			double ySpeed = parkourability.get(Dive.class).getPlayerYSpeed(rotator.getPartialTick());
+			                                              ^
+  symbol:   method getPlayerYSpeed(float)
+  location: class Dive
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/BackwardWallJumpAnimator.java:116: error: cannot find symbol
+				ParCoolConfig.Client.Booleans.EnableCameraAnimationOfBackWallJump.get()
+				                             ^
+  symbol:   variable EnableCameraAnimationOfBackWallJump
+  location: class Booleans
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RideZiplineAnimator.java:28: error: cannot find symbol
+        double acceleration = action.getAcceleration();
+                                    ^
+  symbol:   method getAcceleration()
+  location: variable action of type RideZipline
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RideZiplineAnimator.java:29: error: cannot find symbol
+        double slope = action.getSlope();
+                             ^
+  symbol:   method getSlope()
+  location: variable action of type RideZipline
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RideZiplineAnimator.java:44: error: cannot find symbol
+        var offset = parkourability.get(RideZipline.class).getEndOffsetFromStart();
+                                                          ^
+  symbol:   method getEndOffsetFromStart()
+  location: class RideZipline
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RideZiplineAnimator.java:69: error: cannot find symbol
+        Vec3 offset = parkourability.get(RideZipline.class).getEndOffsetFromStart();
+                                                           ^
+  symbol:   method getEndOffsetFromStart()
+  location: class RideZipline
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/WallSlideAnimator.java:19: error: cannot find symbol
+		Vec3 wall = parkourability.get(WallSlide.class).getLeanedWallDirection();
+		                                               ^
+  symbol:   method getLeanedWallDirection()
+  location: class WallSlide
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:16: error: cannot find symbol
+		return getTick() >= Dodge.MAX_TICK;
+		                         ^
+  symbol:   variable MAX_TICK
+  location: class Dodge
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:27: error: cannot find symbol
+		float phase = (getTick() + transformer.getPartialTick()) / Dodge.MAX_TICK;
+		                                                                ^
+  symbol:   variable MAX_TICK
+  location: class Dodge
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:229: error: cannot find symbol
+		float phase = (getTick() + rotator.getPartialTick()) / Dodge.MAX_TICK;
+		                                                            ^
+  symbol:   variable MAX_TICK
+  location: class Dodge
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:269: error: cannot find symbol
+				if (direction == Dodge.DodgeDirection.Left) {
+				                      ^
+  symbol:   variable DodgeDirection
+  location: class Dodge
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:303: error: cannot find symbol
+				ParCoolConfig.Client.Booleans.EnableCameraAnimationOfDodge.get()
+				                             ^
+  symbol:   variable EnableCameraAnimationOfDodge
+  location: class Booleans
+Note: /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+100 errors
+
+[Incubating] Problems report is available at: file:///mnt/data/Coding/personal/parcool-fabric/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler output below.
+  Note: /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java uses unchecked or unsafe operations.
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:7: error: cannot find symbol
+  import com.alrex.parcool.common.attachment.Attachments;
+                                            ^
+    symbol:   class Attachments
+    location: package com.alrex.parcool.common.attachment
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:11: error: cannot find symbol
+  import com.alrex.parcool.common.network.payload.ClientInformationPayload;
+                                                 ^
+    symbol:   class ClientInformationPayload
+    location: package com.alrex.parcool.common.network.payload
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/Animator.java:64: error: cannot find symbol
+              RenderFrameEvent event,
+              ^
+    symbol:   class RenderFrameEvent
+    location: class Animator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:15: error: cannot find symbol
+  	private final Roll.Direction direction;
+  	                  ^
+    symbol:   class Direction
+    location: class Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:17: error: cannot find symbol
+  	public RollAnimator(Roll.Direction direction) {
+  	                        ^
+    symbol:   class Direction
+    location: class Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:285: error: cannot find symbol
+  	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+  	                          ^
+    symbol:   class CameraState
+    location: class RollAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:300: error: cannot find symbol
+  	void onCameraSetUpFrontBack(CameraState event, Player clientPlayer, Parkourability parkourability) {
+  	                            ^
+    symbol:   class CameraState
+    location: class RollAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:313: error: cannot find symbol
+  	void onCameraSetUpLeftRight(CameraState event, Player clientPlayer, Parkourability parkourability) {
+  	                            ^
+    symbol:   class CameraState
+    location: class RollAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:334: error: cannot find symbol
+  	public void onRenderTick(RenderFrameEvent event, Player player, Parkourability parkourability) {
+  	                         ^
+    symbol:   class RenderFrameEvent
+    location: class RollAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:73: error: cannot find symbol
+  	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+  	                          ^
+    symbol:   class CameraState
+    location: class HangAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HorizontalWallRunAnimator.java:96: error: cannot find symbol
+  	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+  	                          ^
+    symbol:   class CameraState
+    location: class HorizontalWallRunAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:109: error: cannot find symbol
+  	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+  	                          ^
+    symbol:   class CameraState
+    location: class SpeedVaultAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ExaggeratedSideDodgeAnimator.java:19: error: cannot find symbol
+  	final Dodge.DodgeDirection direction;
+  	           ^
+    symbol:   class DodgeDirection
+    location: class Dodge
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ExaggeratedSideDodgeAnimator.java:21: error: cannot find symbol
+  	public ExaggeratedSideDodgeAnimator(Dodge.DodgeDirection dodgeDirection) {
+  	                                         ^
+    symbol:   class DodgeDirection
+    location: class Dodge
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ExaggeratedSideDodgeAnimator.java:149: error: cannot find symbol
+      public void onRenderTick(RenderFrameEvent event, Player player, Parkourability parkourability) {
+                               ^
+    symbol:   class RenderFrameEvent
+    location: class ExaggeratedSideDodgeAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/BackwardWallJumpAnimator.java:113: error: cannot find symbol
+  	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+  	                          ^
+    symbol:   class CameraState
+    location: class BackwardWallJumpAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RideZiplineAnimator.java:62: error: cannot find symbol
+      public void onRenderTick(RenderFrameEvent event, Player player, Parkourability parkourability) {
+                               ^
+    symbol:   class RenderFrameEvent
+    location: class RideZiplineAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:19: error: cannot find symbol
+  	final Dodge.DodgeDirection direction;
+  	           ^
+    symbol:   class DodgeDirection
+    location: class Dodge
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:21: error: cannot find symbol
+  	public DodgeAnimator(Dodge.DodgeDirection dodgeDirection) {
+  	                          ^
+    symbol:   class DodgeDirection
+    location: class Dodge
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:300: error: cannot find symbol
+  	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+  	                          ^
+    symbol:   class CameraState
+    location: class DodgeAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:336: error: cannot find symbol
+      public void onRenderTick(RenderFrameEvent event, Player player, Parkourability parkourability) {
+                               ^
+    symbol:   class RenderFrameEvent
+    location: class DodgeAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/KongVaultAnimator.java:122: error: cannot find symbol
+  	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+  	                          ^
+    symbol:   class CameraState
+    location: class KongVaultAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/FlippingAnimator.java:15: error: cannot find symbol
+      public FlippingAnimator(Flipping.Direction direction) {
+                                      ^
+    symbol:   class Direction
+    location: class Flipping
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/FlippingAnimator.java:19: error: cannot find symbol
+      private final Flipping.Direction direction;
+                            ^
+    symbol:   class Direction
+    location: class Flipping
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/FlippingAnimator.java:161: error: cannot find symbol
+  	public void onCameraSetUp(CameraState event, Player clientPlayer, Parkourability parkourability) {
+  	                          ^
+    symbol:   class CameraState
+    location: class FlippingAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/client/LocalStamina.java:4: error: cannot find symbol
+  import com.alrex.parcool.common.attachment.Attachments;
+                                            ^
+    symbol:   class Attachments
+    location: package com.alrex.parcool.common.attachment
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/client/LocalStamina.java:5: error: cannot find symbol
+  import com.alrex.parcool.common.attachment.ClientAttachments;
+                                            ^
+    symbol:   class ClientAttachments
+    location: package com.alrex.parcool.common.attachment
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/client/Animation.java:10: error: cannot find symbol
+  import com.alrex.parcool.common.attachment.ClientAttachments;
+                                            ^
+    symbol:   class ClientAttachments
+    location: package com.alrex.parcool.common.attachment
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/client/Animation.java:89: error: cannot find symbol
+  	public void onRenderTick(RenderFrameEvent event, Player player, Parkourability parkourability) {
+  	                         ^
+    symbol:   class RenderFrameEvent
+    location: class Animation
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/ActionProcessor.java:4: error: cannot find symbol
+  import com.alrex.parcool.common.attachment.Attachments;
+                                            ^
+    symbol:   class Attachments
+    location: package com.alrex.parcool.common.attachment
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/network/payload/ActionStatePayload.java:8: error: cannot find symbol
+  import com.alrex.parcool.common.network.ActionSynchronizationBroadcaster;
+                                         ^
+    symbol:   class ActionSynchronizationBroadcaster
+    location: package com.alrex.parcool.common.network
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/network/payload/ActionStatePayload.java:81: error: cannot find symbol
+      public static void handleClient(ActionStatePayload payload, IPayloadContext context) {
+                                                                  ^
+    symbol:   class IPayloadContext
+    location: class ActionStatePayload
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/network/payload/ActionStatePayload.java:92: error: cannot find symbol
+      public static void handleServer(ActionStatePayload payload, IPayloadContext context) {
+                                                                  ^
+    symbol:   class IPayloadContext
+    location: class ActionStatePayload
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:23: error: cannot find symbol
+  	@Nullable
+  	 ^
+    symbol:   class Nullable
+    location: class DiveAnimationHostAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:94: error: cannot find symbol
+  		if (server.AdvantageousValue) {
+  		          ^
+    symbol:   variable AdvantageousValue
+    location: variable server of type Booleans
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:102: error: cannot find symbol
+  		if (server.Advantageous == ParCoolConfig.AdvantageousDirection.Higher) {
+  		          ^
+    symbol:   variable Advantageous
+    location: variable server of type Integers
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:110: error: cannot find symbol
+  		if (server.Advantageous == ParCoolConfig.AdvantageousDirection.Higher) {
+  		          ^
+    symbol:   variable Advantageous
+    location: variable server of type Doubles
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/attachment/common/Parkourability.java:120: error: cannot find symbol
+  		net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking.send(new ClientInformationPayload(player.getUUID(), true, parkourability.getClientInfo()));
+  		                                                                           ^
+    symbol:   class ClientInformationPayload
+    location: class Parkourability
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/PlayerModelTransformer.java:29: error: cannot find symbol
+  		return state.partialTick;
+  		            ^
+    symbol:   variable partialTick
+    location: variable state of type AvatarRenderState
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:83: error: cannot find symbol
+  		if (direction == Roll.Direction.Left) {
+  		                     ^
+    symbol:   variable Direction
+    location: class Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:217: error: cannot find symbol
+  		float sign = direction == Roll.Direction.Front ? 1 : -1;
+  		                              ^
+    symbol:   variable Direction
+    location: class Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:219: error: cannot find symbol
+          if (direction == Roll.Direction.Front) {
+                               ^
+    symbol:   variable Direction
+    location: class Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:264: error: cannot find symbol
+  				if (direction == Roll.Direction.Left) {
+  				                     ^
+    symbol:   variable Direction
+    location: class Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:302: error: cannot find symbol
+  		float sign = direction == Roll.Direction.Front ? 1 : -1;
+  		                              ^
+    symbol:   variable Direction
+    location: class Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:306: error: cannot find symbol
+  				ParCoolConfig.Client.Booleans.EnableCameraAnimationOfRolling.get()
+  				                             ^
+    symbol:   variable EnableCameraAnimationOfRolling
+    location: class Booleans
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:321: error: cannot find symbol
+  				ParCoolConfig.Client.Booleans.EnableCameraAnimationOfRolling.get()
+  				                             ^
+    symbol:   variable EnableCameraAnimationOfRolling
+    location: class Booleans
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:326: error: cannot find symbol
+  			if (direction == Roll.Direction.Right)
+  			                     ^
+    symbol:   variable Direction
+    location: class Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:76: error: cannot find symbol
+  				!ParCoolConfig.Client.Booleans.EnableCameraAnimationOfHangDown.get()
+  				                              ^
+    symbol:   variable EnableCameraAnimationOfHangDown
+    location: class Booleans
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HorizontalWallRunAnimator.java:98: error: cannot find symbol
+  				!ParCoolConfig.Client.Booleans.EnableCameraAnimationOfHWallRun.get()
+  				                              ^
+    symbol:   variable EnableCameraAnimationOfHWallRun
+    location: class Booleans
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:20: error: cannot find symbol
+  		return getTick() >= Vault.MAX_TICK;
+  		                         ^
+    symbol:   variable MAX_TICK
+    location: class Vault
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:24: error: cannot find symbol
+  		float phase = tick / Vault.MAX_TICK;
+  		                          ^
+    symbol:   variable MAX_TICK
+    location: class Vault
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:34: error: cannot find symbol
+  		float phase = (getTick() + rotator.getPartialTick()) / Vault.MAX_TICK;
+  		                                                            ^
+    symbol:   variable MAX_TICK
+    location: class Vault
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:51: error: cannot find symbol
+  		float phase = (getTick() + transformer.getPartialTick()) / Vault.MAX_TICK;
+  		                                                                ^
+    symbol:   variable MAX_TICK
+    location: class Vault
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:111: error: cannot find symbol
+  				!ParCoolConfig.Client.Booleans.EnableCameraAnimationOfVault.get()) return;
+  				                              ^
+    symbol:   variable EnableCameraAnimationOfVault
+    location: class Booleans
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SpeedVaultAnimator.java:113: error: cannot find symbol
+  		float phase = (float) ((getTick() + event.getPartialTick()) / Vault.MAX_TICK);
+  		                                                                   ^
+    symbol:   variable MAX_TICK
+    location: class Vault
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/JumpChargingAnimator.java:63: error: cannot find symbol
+          float transitionPhase = Math.min(1f, (parkourability.get(ChargeJump.class).getChargingTick() + partialTick) / ChargeJump.JUMP_MAX_CHARGE_TICK);
+                                                                                                                                  ^
+    symbol:   variable JUMP_MAX_CHARGE_TICK
+    location: class ChargeJump
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/FastRunningAnimator.java:138: error: cannot find symbol
+  		if (parkourability.getClientInfo().get(ParCoolConfig.Client.Booleans.EnableLeanAnimationOfFastRun)) {
+  		                                                                    ^
+    symbol:   variable EnableLeanAnimationOfFastRun
+    location: class Booleans
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:171: error: cannot find symbol
+              if (KeyBindings.isKeyForwardDown()) {
+                  ^
+    symbol:   variable KeyBindings
+    location: class SkyDiveAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:172: error: cannot find symbol
+                  if (KeyBindings.isKeyBackDown()) {
+                      ^
+    symbol:   variable KeyBindings
+    location: class SkyDiveAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:178: error: cannot find symbol
+              } else if (KeyBindings.isKeyBackDown()) {
+                         ^
+    symbol:   variable KeyBindings
+    location: class SkyDiveAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:184: error: cannot find symbol
+              if (KeyBindings.isKeyRightDown()) {
+                  ^
+    symbol:   variable KeyBindings
+    location: class SkyDiveAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:185: error: cannot find symbol
+                  if (KeyBindings.isKeyLeftDown()) {
+                      ^
+    symbol:   variable KeyBindings
+    location: class SkyDiveAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:191: error: cannot find symbol
+              } else if (KeyBindings.isKeyLeftDown()) {
+                         ^
+    symbol:   variable KeyBindings
+    location: class SkyDiveAnimator
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/BackwardWallJumpAnimator.java:116: error: cannot find symbol
+  				ParCoolConfig.Client.Booleans.EnableCameraAnimationOfBackWallJump.get()
+  				                             ^
+    symbol:   variable EnableCameraAnimationOfBackWallJump
+    location: class Booleans
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:16: error: cannot find symbol
+  		return getTick() >= Dodge.MAX_TICK;
+  		                         ^
+    symbol:   variable MAX_TICK
+    location: class Dodge
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:27: error: cannot find symbol
+  		float phase = (getTick() + transformer.getPartialTick()) / Dodge.MAX_TICK;
+  		                                                                ^
+    symbol:   variable MAX_TICK
+    location: class Dodge
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:229: error: cannot find symbol
+  		float phase = (getTick() + rotator.getPartialTick()) / Dodge.MAX_TICK;
+  		                                                            ^
+    symbol:   variable MAX_TICK
+    location: class Dodge
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:269: error: cannot find symbol
+  				if (direction == Dodge.DodgeDirection.Left) {
+  				                      ^
+    symbol:   variable DodgeDirection
+    location: class Dodge
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DodgeAnimator.java:303: error: cannot find symbol
+  				ParCoolConfig.Client.Booleans.EnableCameraAnimationOfDodge.get()
+  				                             ^
+    symbol:   variable EnableCameraAnimationOfDodge
+    location: class Booleans
+  Note: Recompile with -Xlint:unchecked for details.
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/api/unstable/animation/ParCoolAnimationInfoEvent.java:8: error: cannot find symbol
+  public class ParCoolAnimationInfoEvent extends Event {
+                                                 ^
+    symbol: class Event
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/SlidingAnimator.java:51: error: cannot find symbol
+          Vec3 vec = parkourability.get(Slide.class).getSlidingVector();
+                                                    ^
+    symbol:   method getSlidingVector()
+    location: class Slide
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HideInBlockAnimator.java:58: error: cannot find symbol
+          Vec3 lookVec = parkourability.get(HideInBlock.class).getLookDirection();
+                                                              ^
+    symbol:   method getLookDirection()
+    location: class HideInBlock
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:48: error: cannot find symbol
+  		float phase = (getTick() + transformer.getPartialTick()) / roll.getRollMaxTick();
+  		                                                               ^
+    symbol:   method getRollMaxTick()
+    location: variable roll of type Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:74: error: cannot find symbol
+  		float phase = (getTick() + transformer.getPartialTick()) / roll.getRollMaxTick();
+  		                                                               ^
+    symbol:   method getRollMaxTick()
+    location: variable roll of type Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:214: error: cannot find symbol
+  		float phase = (getTick() + rotator.getPartialTick()) / roll.getRollMaxTick();
+  		                                                           ^
+    symbol:   method getRollMaxTick()
+    location: variable roll of type Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:239: error: cannot find symbol
+  		float phase = (getTick() + rotator.getPartialTick()) / parkourability.get(Roll.class).getRollMaxTick();
+  		                                                                                     ^
+    symbol:   method getRollMaxTick()
+    location: class Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:308: error: cannot find symbol
+  			float factor = calculateMovementFactor((float) ((roll.getDoingTick() + event.getPartialTick()) / (float) roll.getRollMaxTick()));
+  			                                                                                                             ^
+    symbol:   method getRollMaxTick()
+    location: variable roll of type Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RollAnimator.java:314: error: cannot find symbol
+  		float phase = (float) ((getTick() + event.getPartialTick()) / parkourability.get(Roll.class).getRollMaxTick());
+  		                                                                                            ^
+    symbol:   method getRollMaxTick()
+    location: class Roll
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:20: error: cannot find symbol
+  		HangDown.BarAxis axis = hangDown.getHangingBarAxis();
+  		                                ^
+    symbol:   method getHangingBarAxis()
+    location: variable hangDown of type HangDown
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:22: error: cannot find symbol
+  		boolean orthogonal = hangDown.isOrthogonalToBar();
+  		                             ^
+    symbol:   method isOrthogonalToBar()
+    location: variable hangDown of type HangDown
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:27: error: cannot find symbol
+  			float zAngle = (float) Math.toRadians(10 + 20 * Math.sin(24 * hangDown.getArmSwingAmount()));
+  			                                                                      ^
+    symbol:   method getArmSwingAmount()
+    location: variable hangDown of type HangDown
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:40: error: cannot find symbol
+  			float xAngle = (float) Math.toRadians(180 + 25 * Math.sin(24 * hangDown.getArmSwingAmount()));
+  			                                                                       ^
+    symbol:   method getArmSwingAmount()
+    location: variable hangDown of type HangDown
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/HangAnimator.java:61: error: cannot find symbol
+  		return (float) (-hangDown.getBodySwingAngleFactor() * 40 * Math.sin((hangDown.getDoingTick() + partialTick) / 10 * Math.PI));
+  		                         ^
+    symbol:   method getBodySwingAngleFactor()
+    location: variable hangDown of type HangDown
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/JumpChargingAnimator.java:15: error: cannot find symbol
+          return !c.isCharging();
+                   ^
+    symbol:   method isCharging()
+    location: variable c of type ChargeJump
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/JumpChargingAnimator.java:62: error: cannot find symbol
+          partialTick *= (parkourability.get(ChargeJump.class).getNotChargingTick() == 0 ? 1 : -1);
+                                                              ^
+    symbol:   method getNotChargingTick()
+    location: class ChargeJump
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/JumpChargingAnimator.java:63: error: cannot find symbol
+          float transitionPhase = Math.min(1f, (parkourability.get(ChargeJump.class).getChargingTick() + partialTick) / ChargeJump.JUMP_MAX_CHARGE_TICK);
+                                                                                    ^
+    symbol:   method getChargingTick()
+    location: class ChargeJump
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ClingToCliffAnimator.java:22: error: cannot find symbol
+  		switch (parkourability.get(ClingToCliff.class).getFacingDirection()) {
+  		                                              ^
+    symbol:   method getFacingDirection()
+    location: class ClingToCliff
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ClingToCliffAnimator.java:24: error: cannot find symbol
+  				double zAngle = 10 + 20 * Math.sin(24 * parkourability.get(ClingToCliff.class).getArmSwingAmount());
+  				                                                                              ^
+    symbol:   method getArmSwingAmount()
+    location: class ClingToCliff
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/ClingToCliffAnimator.java:67: error: cannot find symbol
+  		switch (cling.getFacingDirection()) {
+  		             ^
+    symbol:   method getFacingDirection()
+    location: variable cling of type ClingToCliff
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:301: error: cannot find symbol
+  			double ySpeed = parkourability.get(Dive.class).getPlayerYSpeed(transformer.getPartialTick());
+  			                                              ^
+    symbol:   method getPlayerYSpeed(float)
+    location: class Dive
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:319: error: cannot find symbol
+  			double ySpeed = parkourability.get(Dive.class).getPlayerYSpeed(rotator.getPartialTick());
+  			                                              ^
+    symbol:   method getPlayerYSpeed(float)
+    location: class Dive
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RideZiplineAnimator.java:28: error: cannot find symbol
+          double acceleration = action.getAcceleration();
+                                      ^
+    symbol:   method getAcceleration()
+    location: variable action of type RideZipline
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RideZiplineAnimator.java:29: error: cannot find symbol
+          double slope = action.getSlope();
+                               ^
+    symbol:   method getSlope()
+    location: variable action of type RideZipline
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RideZiplineAnimator.java:44: error: cannot find symbol
+          var offset = parkourability.get(RideZipline.class).getEndOffsetFromStart();
+                                                            ^
+    symbol:   method getEndOffsetFromStart()
+    location: class RideZipline
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/RideZiplineAnimator.java:69: error: cannot find symbol
+          Vec3 offset = parkourability.get(RideZipline.class).getEndOffsetFromStart();
+                                                             ^
+    symbol:   method getEndOffsetFromStart()
+    location: class RideZipline
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/WallSlideAnimator.java:19: error: cannot find symbol
+  		Vec3 wall = parkourability.get(WallSlide.class).getLeanedWallDirection();
+  		                                               ^
+    symbol:   method getLeanedWallDirection()
+    location: class WallSlide
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:6: error: package com.alrex.parcool.client.input does not exist
+  import com.alrex.parcool.client.input.KeyBindings;
+                                       ^
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/impl/DiveAnimationHostAnimator.java:15: error: package javax.annotation does not exist
+  import javax.annotation.Nullable;
+                         ^
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/client/animation/PassiveCustomAnimation.java:3: error: package com.alrex.parcool.client.input does not exist
+  import com.alrex.parcool.client.input.KeyBindings;
+                                       ^
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/api/unstable/animation/ParCoolAnimationInfoEvent.java:5: error: package net.neoforged.bus.api does not exist
+  import net.neoforged.bus.api.Event;
+                              ^
+  100 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 2s
+1 actionable task: 1 executed

@@ -19,5 +19,9 @@ public class ParCool implements ModInitializer {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
             CommandRegistry.register(dispatcher);
         });
+
+        net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry.playC2S().register(com.alrex.parcool.common.network.payload.ActionStatePayload.TYPE, com.alrex.parcool.common.network.payload.ActionStatePayload.CODEC);
+        net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry.playS2C().register(com.alrex.parcool.common.network.payload.ActionStatePayload.TYPE, com.alrex.parcool.common.network.payload.ActionStatePayload.CODEC);
+        net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking.registerGlobalReceiver(com.alrex.parcool.common.network.payload.ActionStatePayload.TYPE, com.alrex.parcool.common.network.payload.ActionStatePayload::handleServer);
     }
 }

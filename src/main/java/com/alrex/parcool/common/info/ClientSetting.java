@@ -19,7 +19,7 @@ public abstract class ClientSetting {
     private static class Default extends ClientSetting {
         @Override
         public boolean getPossibilityOf(Class<? extends Action> action) {
-            return false;
+            return true;
         }
 
         @Override

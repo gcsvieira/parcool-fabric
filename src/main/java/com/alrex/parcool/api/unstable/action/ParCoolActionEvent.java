@@ -1,0 +1,130 @@
+package com.alrex.parcool.api.unstable.action;
+
+import com.alrex.parcool.common.action.Action;
+import net.minecraft.world.entity.player.Player;
+
+
+
+public class ParCoolActionEvent {
+    private final Player player;
+    private final Action action;
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public Action getAction() {
+        return action;
+    }
+
+    public ParCoolActionEvent(Player player, Action action) {
+        this.player = player;
+        this.action = action;
+    }
+
+    private boolean canceled = false;
+
+    public boolean isCanceled() {
+        return canceled;
+    }
+
+    public void setCanceled(boolean canceled) {
+        this.canceled = canceled;
+    }
+
+    @Deprecated
+    public static class TryToStartEvent extends ParCoolActionEvent {
+        public TryToStartEvent(Player player, Action action) {
+            super(player, action);
+        }
+    }
+
+    @Deprecated
+    public static class TryToContinueEvent extends ParCoolActionEvent {
+        public TryToContinueEvent(Player player, Action action) {
+            super(player, action);
+        }
+    }
+
+    @Deprecated
+    public static class StartEvent extends ParCoolActionEvent {
+        public StartEvent(Player player, Action action) {
+            super(player, action);
+        }
+    }
+
+    @Deprecated
+    public static class StopEvent extends ParCoolActionEvent {
+        public StopEvent(Player player, Action action) {
+            super(player, action);
+        }
+    }
+    // ======
+
+    public static class TryToStart extends ParCoolActionEvent {
+        public TryToStart(Player player, Action action) {
+            super(player, action);
+        }
+    }
+
+    public static class TryToContinue extends ParCoolActionEvent {
+        public TryToContinue(Player player, Action action) {
+            super(player, action);
+        }
+    }
+
+    public static class Start extends ParCoolActionEvent {
+        private Start(Player player, Action action) {
+            super(player, action);
+        }
+
+        public static class Pre extends Start {
+            public Pre(Player player, Action action) {
+                super(player, action);
+            }
+        }
+
+        public static class Post extends Start {
+            public Post(Player player, Action action) {
+                super(player, action);
+            }
+        }
+    }
+
+    public static class Finish extends ParCoolActionEvent {
+        private Finish(Player player, Action action) {
+            super(player, action);
+        }
+
+        public static class Pre extends Finish {
+            public Pre(Player player, Action action) {
+                super(player, action);
+            }
+        }
+
+        public static class Post extends Finish {
+            public Post(Player player, Action action) {
+                super(player, action);
+            }
+        }
+    }
+
+    public static class Tick extends ParCoolActionEvent {
+        private Tick(Player player, Action action) {
+            super(player, action);
+        }
+
+        public static class Pre extends Tick {
+            public Pre(Player player, Action action) {
+                super(player, action);
+            }
+        }
+
+        public static class Post extends Tick {
+            public Post(Player player, Action action) {
+                super(player, action);
+            }
+        }
+    }
+
+}

@@ -10,13 +10,15 @@ links: ["[[MOC-tasks]]"]
 **Goal:** Enable the parkour movement logic in a singleplayer environment.
 
 ## Goals
-- [ ] Port `ActionProcessor` to Fabric tick callbacks
-- [ ] Register all handlers to Fabric event callbacks
-- [ ] Port Key Bindings and `KeyRecorder`
-- [ ] Enable core Mixins (`LivingEntity`, `Entity`, `Player`)
-- [ ] Port client-side stamina logic
+- [x] Port `ActionProcessor` to Fabric tick callbacks
+- [x] Register all handlers to Fabric event callbacks
+- [x] Port Key Bindings and `KeyRecorder`
+- [x] Enable core Mixins (`LivingEntity`, `Entity`, `Player`)
+- [x] Port client-side stamina logic
+- [x] Implement and stabilize Crawl action
+- [ ] Mass port remaining movement actions
 
 ## Verification
-- [ ] Movement keys trigger parkour actions (e.g., Wall Jump)
-- [ ] Stamina depletes during actions
-- [ ] Actions feel responsive and correct
+- [x] Movement keys trigger parkour actions (e.g., Wall Jump)
+- [x] Stamina depletes during actions
+- [x] Actions feel responsive and correct
