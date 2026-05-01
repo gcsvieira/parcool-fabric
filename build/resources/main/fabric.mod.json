@@ -1,13 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "parcool",
-  "version": "${version}",
+  "version": "3.4.3.3-fabric",
   "name": "ParCool!",
   "description": "Parkour actions for Minecraft",
-  "authors": [
-    "alRex_U",
-    "glhrm (Fabric Port)"
-  ],
+  "authors": ["alRex_U"],
   "contact": {
     "homepage": "https://github.com/alRex-U/ParCool",
     "sources": "https://github.com/alRex-U/ParCool"

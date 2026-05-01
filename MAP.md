@@ -22,6 +22,7 @@ updated: 2026-05-01
 
 - **Source:** NeoForge 1.21.11 (v21.11.42)
 - **Target:** Fabric 1.21.11
+- **Ported by:** [glhrm](https://github.com/glhrm)
 - **Completion:** 0% (Bootstrapping phase)
 
 ## Code Registry (Execution)

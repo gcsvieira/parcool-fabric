@@ -4,7 +4,10 @@
   "version": "${version}",
   "name": "ParCool!",
   "description": "Parkour actions for Minecraft",
-  "authors": ["alRex_U"],
+  "authors": [
+    "alRex_U",
+    "glhrm (Fabric Port)"
+  ],
   "contact": {
     "homepage": "https://github.com/alRex-U/ParCool",
     "sources": "https://github.com/alRex-U/ParCool"
