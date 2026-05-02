@@ -18,3 +18,5 @@ Process insights and technical debt records.
 - [[12-ai-agent-guide]]
 - [[lesson-session-4-stability]]
 - [[lesson-session-5-rendering-and-recipes]]
+- [[lesson-session-6-mass-porting]]
+- [[lesson-session-7-completion]]

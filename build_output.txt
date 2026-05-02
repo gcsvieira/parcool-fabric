@@ -1,0 +1,150 @@
+
+> Configure project :
+Fabric Loom: 1.16.1
+
+> Task :compileJava FAILED
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/HideInBlock.java:73: error: cannot find symbol
+        } else if (KeyBindings.getKeyHideInBlock().isDown() && (!ParCoolConfig.Client.Booleans.HideInBlockSneakNeeded.get() || player.getPose() == Pose.CROUCHING)) {
+                                                                                              ^
+  symbol:   variable HideInBlockSneakNeeded
+  location: class Booleans
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/HideInBlock.java:243: error: cannot find symbol
+                    world.levelEvent(2001, pos, net.minecraft.world.level.block.Block.getRawIdFromState(state));
+                                                                                     ^
+  symbol:   method getRawIdFromState(BlockState)
+  location: class Block
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:68: error: cannot find symbol
+                    && !cp.input.pressingForward
+                                ^
+  symbol:   variable pressingForward
+  location: variable input of type ClientInput
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:69: error: cannot find symbol
+                    && !cp.input.pressingBackward
+                                ^
+  symbol:   variable pressingBackward
+  location: variable input of type ClientInput
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:70: error: cannot find symbol
+                    && !cp.input.pressingRight
+                                ^
+  symbol:   variable pressingRight
+  location: variable input of type ClientInput
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:71: error: cannot find symbol
+                    && !cp.input.pressingLeft
+                                ^
+  symbol:   variable pressingLeft
+  location: variable input of type ClientInput
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:121: error: cannot find symbol
+                            && !cp.input.pressingForward
+                                        ^
+  symbol:   variable pressingForward
+  location: variable input of type ClientInput
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:122: error: cannot find symbol
+                            && !cp.input.pressingBackward
+                                        ^
+  symbol:   variable pressingBackward
+  location: variable input of type ClientInput
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:123: error: cannot find symbol
+                            && !cp.input.pressingRight
+                                        ^
+  symbol:   variable pressingRight
+  location: variable input of type ClientInput
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:124: error: cannot find symbol
+                            && !cp.input.pressingLeft
+                                        ^
+  symbol:   variable pressingLeft
+  location: variable input of type ClientInput
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:134: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:139: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/CatLeap.java:102: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/CatLeap.java:107: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+14 errors
+
+[Incubating] Problems report is available at: file:///mnt/data/Coding/personal/parcool-fabric/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler output below.
+  Note: Recompile with -Xlint:deprecation for details.
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/HideInBlock.java:73: error: cannot find symbol
+          } else if (KeyBindings.getKeyHideInBlock().isDown() && (!ParCoolConfig.Client.Booleans.HideInBlockSneakNeeded.get() || player.getPose() == Pose.CROUCHING)) {
+                                                                                                ^
+    symbol:   variable HideInBlockSneakNeeded
+    location: class Booleans
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:68: error: cannot find symbol
+                      && !cp.input.pressingForward
+                                  ^
+    symbol:   variable pressingForward
+    location: variable input of type ClientInput
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:69: error: cannot find symbol
+                      && !cp.input.pressingBackward
+                                  ^
+    symbol:   variable pressingBackward
+    location: variable input of type ClientInput
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:70: error: cannot find symbol
+                      && !cp.input.pressingRight
+                                  ^
+    symbol:   variable pressingRight
+    location: variable input of type ClientInput
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:71: error: cannot find symbol
+                      && !cp.input.pressingLeft
+                                  ^
+    symbol:   variable pressingLeft
+    location: variable input of type ClientInput
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:121: error: cannot find symbol
+                              && !cp.input.pressingForward
+                                          ^
+    symbol:   variable pressingForward
+    location: variable input of type ClientInput
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:122: error: cannot find symbol
+                              && !cp.input.pressingBackward
+                                          ^
+    symbol:   variable pressingBackward
+    location: variable input of type ClientInput
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:123: error: cannot find symbol
+                              && !cp.input.pressingRight
+                                          ^
+    symbol:   variable pressingRight
+    location: variable input of type ClientInput
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:124: error: cannot find symbol
+                              && !cp.input.pressingLeft
+                                          ^
+    symbol:   variable pressingLeft
+    location: variable input of type ClientInput
+  Note: Some input files use or override a deprecated API.
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:134: error: method does not override or implement a method from a supertype
+      @Override
+      ^
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/ChargeJump.java:139: error: method does not override or implement a method from a supertype
+      @Override
+      ^
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/CatLeap.java:102: error: method does not override or implement a method from a supertype
+      @Override
+      ^
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/CatLeap.java:107: error: method does not override or implement a method from a supertype
+      @Override
+      ^
+  /mnt/data/Coding/personal/parcool-fabric/src/main/java/com/alrex/parcool/common/action/impl/HideInBlock.java:243: error: cannot find symbol
+                      world.levelEvent(2001, pos, net.minecraft.world.level.block.Block.getRawIdFromState(state));
+                                                                                       ^
+    symbol:   method getRawIdFromState(BlockState)
+    location: class Block
+  14 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 1s
+1 actionable task: 1 executed
