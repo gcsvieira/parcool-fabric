@@ -5,10 +5,12 @@ import com.alrex.parcool.common.action.impl.ChargeJump;
 import com.alrex.parcool.common.action.impl.ClimbPoles;
 import com.alrex.parcool.common.action.impl.ClimbUp;
 import com.alrex.parcool.common.attachment.common.Parkourability;
+import com.alrex.parcool.common.data.ParkourabilityAccess;
 import com.alrex.parcool.common.tags.BlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,6 +20,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -38,12 +41,14 @@ public abstract class LivingEntityMixin extends Entity {
 		if (!((Object) this instanceof Player player)) return;
 		Parkourability parkourability = Parkourability.get(player);
 		if (parkourability == null) return;
+		parkourability.getAdditionalProperties().onJump();
+        parkourability.onJump(player);
 		if (parkourability.getBehaviorEnforcer().cancelJump()) {
 			ci.cancel();
 		}
 	}
 
-	@Inject(method = "Lnet/minecraft/world/entity/LivingEntity;onClimbable()Z", at = @At("HEAD"), cancellable = true)
+	@Inject(method = "onClimbable", at = @At("HEAD"), cancellable = true)
 	public void onClimbable(CallbackInfoReturnable<Boolean> cir) {
 		if (this.isSpectator()) {
 			cir.setReturnValue(false);
@@ -122,4 +127,14 @@ public abstract class LivingEntityMixin extends Entity {
 			}
 		}
 	}
+
+    @Inject(method = "causeFallDamage", at = @At("HEAD"))
+    private void onCauseFallDamage(double fallDistance, float multiplier, DamageSource source, CallbackInfoReturnable<Boolean> cir) {
+        if ((Object) this instanceof Player player) {
+            Parkourability parkourability = Parkourability.get(player);
+            if (parkourability != null) {
+                parkourability.onLand(player, (float) fallDistance);
+            }
+        }
+    }
 }

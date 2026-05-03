@@ -2,7 +2,7 @@
 id: task-phase-4-core-action-loop
 type: task
 tags: ["#phase-4", "#loop"]
-links: ["[[MOC-tasks]]"]
+links: ["[[MOC-tasks]]", "[[lesson-fabric-platform-divergence-sound-api]]", "[[lesson-input-api-attribute-expansion-logic-consistency]]"]
 ---
 
 # 🔄 Task: Phase 4 - Core Action Loop

@@ -2,7 +2,7 @@
 id: rendering-and-gui
 type: knowledge
 tags: ["#porting", "#rendering"]
-links: ["[[MOC-porting]]"]
+links: ["[[MOC-porting]]", "[[lesson-rendering-refactor-chunksectionlayer]]"]
 ---
 
 # Rendering, HUD, and Client-Side Migration

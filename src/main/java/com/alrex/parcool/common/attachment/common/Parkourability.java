@@ -142,4 +142,16 @@ public class Parkourability {
 
 		return false;
 	}
+
+    public void onJump(Player player) {
+        for (Action action : actions) {
+            action.onJump(player, this);
+        }
+    }
+
+    public void onLand(Player player, float fallDistance) {
+        for (Action action : actions) {
+            action.onLand(player, this, fallDistance);
+        }
+    }
 }

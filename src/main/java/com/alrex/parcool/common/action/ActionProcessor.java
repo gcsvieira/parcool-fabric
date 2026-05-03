@@ -261,14 +261,14 @@ public class ActionProcessor {
 			}
 		}
 
-		public static void onViewRender(Camera camera) {
+		public static void onViewRender(float tickDelta, Camera camera) {
 			LocalPlayer player = Minecraft.getInstance().player;
 			if (player == null) return;
 			Parkourability parkourability = Parkourability.get(player);
 			if (parkourability == null) return;
 			Animation animation = Animation.get(player);
 			if (animation == null) return;
-			animation.cameraSetup(camera, player, parkourability);
+			animation.cameraSetup(tickDelta, camera, player, parkourability);
 		}
 	}
 }

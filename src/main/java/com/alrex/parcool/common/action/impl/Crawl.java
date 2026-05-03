@@ -23,6 +23,18 @@ public class Crawl extends Action {
     }
 
     @Override
+    public void onStartInLocalClient(Player player, Parkourability parkourability, ByteBuffer startData) {
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.CrawlAnimator());
+    }
+
+    @Override
+    public void onStartInOtherClient(Player player, Parkourability parkourability, ByteBuffer startData) {
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.CrawlAnimator());
+    }
+
+    @Override
     public void onWorkingTick(Player player, Parkourability parkourability) {
         ((ForcedPoseAccess) player).parcool$setForcedPose(Pose.SWIMMING);
     }

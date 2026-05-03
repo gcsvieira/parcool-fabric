@@ -2,7 +2,7 @@
 id: task-phase-1-copy-logic
 type: task
 tags: ["#phase-1", "#logic"]
-links: ["[[MOC-tasks]]"]
+links: ["[[MOC-tasks]]", "[[lesson-logic-migration-fabric]]"]
 ---
 
 # 🧠 Task: Phase 1 - Copy Pure Logic

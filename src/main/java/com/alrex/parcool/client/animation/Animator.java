@@ -5,8 +5,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Camera;
 
 public abstract class Animator {
-    public interface PlayerModelTransformer {}
-    public interface PlayerModelRotator {}
 
     private int tick = 0;
 
@@ -51,6 +49,7 @@ public abstract class Animator {
     }
 
     public void onCameraSetUp(
+            float tickDelta,
             Camera camera,
             Player clientPlayer,
             Parkourability parkourability

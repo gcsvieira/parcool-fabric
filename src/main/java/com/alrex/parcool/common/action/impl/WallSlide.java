@@ -61,6 +61,18 @@ public class WallSlide extends Action {
     }
 
     @Override
+    public void onStartInLocalClient(Player player, Parkourability parkourability, ByteBuffer startData) {
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.WallSlideAnimator());
+    }
+
+    @Override
+    public void onStartInOtherClient(Player player, Parkourability parkourability, ByteBuffer startData) {
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.WallSlideAnimator());
+    }
+
+    @Override
     public void onStartInServer(Player player, Parkourability parkourability, ByteBuffer startData) {
         double startYSpeed = startData.getDouble();
         damageCount = (int) (5.5 * (startYSpeed - 1.) / player.getBbHeight());

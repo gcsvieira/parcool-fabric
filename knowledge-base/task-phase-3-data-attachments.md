@@ -2,7 +2,7 @@
 id: task-phase-3-data-attachments
 type: task
 tags: ["#phase-3", "#data"]
-links: ["[[MOC-tasks]]"]
+links: ["[[MOC-tasks]]", "[[lesson-data-attachment-stability-hitbox-sync]]"]
 ---
 
 # 💾 Task: Phase 3 - Data Attachments

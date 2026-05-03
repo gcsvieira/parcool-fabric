@@ -24,7 +24,7 @@ public abstract class ClientSetting {
 
         @Override
         public int getStaminaConsumptionOf(Class<? extends Action> action) {
-            return Integer.MAX_VALUE;
+            return 0;
         }
 
         @Override

@@ -106,7 +106,8 @@ public class VerticalWallRun extends Action {
         if (ParCoolConfig.Client.Booleans.EnableActionSounds.get())
             player.playSound(SoundEvents.VERTICAL_WALL_RUN.value(), 1f, 1f);
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.VerticalWallRunAnimator());
     }
 
     @Override

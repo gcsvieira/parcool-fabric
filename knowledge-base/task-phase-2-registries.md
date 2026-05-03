@@ -2,7 +2,7 @@
 id: task-phase-2-registries
 type: task
 tags: ["#phase-2", "#registries"]
-links: ["[[MOC-tasks]]"]
+links: ["[[MOC-tasks]]", "[[lesson-phase-2-registry-evolution]]"]
 ---
 
 # 📦 Task: Phase 2 - Registries

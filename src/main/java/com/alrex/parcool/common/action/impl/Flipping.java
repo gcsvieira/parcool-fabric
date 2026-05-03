@@ -40,6 +40,7 @@ public class Flipping extends Action {
 
     private boolean justJumped = false;
 
+    @Override
     public void onJump(Player player, Parkourability parkourability) {
         justJumped = true;
     }
@@ -80,16 +81,20 @@ public class Flipping extends Action {
     @Override
     public void onStartInLocalClient(Player player, Parkourability parkourability, ByteBuffer startData) {
         ControlType control = ControlType.values()[startData.getInt()];
+        Direction direction = Direction.values()[startData.getInt()];
         if (control != ControlType.TapMovementAndJump) player.jumpFromGround();
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.FlippingAnimator(direction));
     }
 
     @Override
     public void onStartInOtherClient(Player player, Parkourability parkourability, ByteBuffer startData) {
-        startData.position(4); // skip (int * 1)
+        startData.getInt(); // skip control
+        Direction direction = Direction.values()[startData.getInt()];
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.FlippingAnimator(direction));
     }
 
     @Override

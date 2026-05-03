@@ -2,7 +2,7 @@
 id: lesson-logic-migration-fabric
 type: lesson
 tags: ["#fabric", "#logic", "#migration"]
-links: ["[[MOC-lessons]]"]
+links: ["[[MOC-lessons]]", "[[task-phase-1-copy-logic]]"]
 ---
 
 # 🎓 Lesson: Architecting Logic Migration for Fabric

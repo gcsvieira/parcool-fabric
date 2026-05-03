@@ -101,7 +101,20 @@ public class Vault extends Action {
         stepDirection = new Vec3(startData.getDouble(), startData.getDouble(), startData.getDouble());
         stepHeight = startData.getDouble();
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) {
+            switch (currentAnimation) {
+                case KONG_VAULT:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.KongVaultAnimator());
+                    break;
+                case SPEED_VAULT_LEFT:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.SpeedVaultAnimator(com.alrex.parcool.client.animation.impl.SpeedVaultAnimator.Type.Left));
+                    break;
+                case SPEED_VAULT_RIGHT:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.SpeedVaultAnimator(com.alrex.parcool.client.animation.impl.SpeedVaultAnimator.Type.Right));
+                    break;
+            }
+        }
     }
 
     @Override
@@ -110,7 +123,20 @@ public class Vault extends Action {
         if (ParCoolConfig.Client.Booleans.EnableActionSounds.get())
             player.playSound(SoundEvents.VAULT.value(), 1f, 1f);
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) {
+            switch (currentAnimation) {
+                case KONG_VAULT:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.KongVaultAnimator());
+                    break;
+                case SPEED_VAULT_LEFT:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.SpeedVaultAnimator(com.alrex.parcool.client.animation.impl.SpeedVaultAnimator.Type.Left));
+                    break;
+                case SPEED_VAULT_RIGHT:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.SpeedVaultAnimator(com.alrex.parcool.client.animation.impl.SpeedVaultAnimator.Type.Right));
+                    break;
+            }
+        }
     }
 
     @Override

@@ -75,4 +75,11 @@ public class BreakfallReady extends Action {
     public StaminaConsumeTiming getStaminaConsumeTiming() {
         return StaminaConsumeTiming.None;
     }
+
+    @Override
+    public void onLand(Player player, Parkourability parkourability, float fallDistance) {
+        if (isDoing()) {
+            startBreakfall(player, parkourability, parkourability.getAdditionalProperties().getNotLandingTick() < 14);
+        }
+    }
 }

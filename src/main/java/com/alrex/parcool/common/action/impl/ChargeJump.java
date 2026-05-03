@@ -46,7 +46,8 @@ public class ChargeJump extends Action {
         if (ParCoolConfig.Client.Booleans.EnableActionSounds.get())
             player.playSound(SoundEvents.CHARGE_JUMP.value(), 1, 1);
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.ChargeJumpAnimator());
     }
 
     @Override
@@ -54,7 +55,8 @@ public class ChargeJump extends Action {
         if (ParCoolConfig.Client.Booleans.EnableActionSounds.get())
             player.playSound(SoundEvents.CHARGE_JUMP.value(), 1, 1);
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.ChargeJumpAnimator());
     }
 
     @Override
@@ -90,6 +92,11 @@ public class ChargeJump extends Action {
                                     / (targetAngle.x() * currentAngle.x() + targetAngle.z() * currentAngle.z())
                     );
                     player.setYBodyRot((float) VectorUtil.toYawDegree(currentAngle.yRot((float) (-differenceAngle / 2))));
+                    
+                    com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+                    if (animation != null && !(animation.getAnimator() instanceof com.alrex.parcool.client.animation.impl.JumpChargingAnimator)) {
+                        animation.setAnimator(new com.alrex.parcool.client.animation.impl.JumpChargingAnimator());
+                    }
                 }
             } else {
                 if (coolTimeTick > 0) coolTimeTick--;
@@ -99,6 +106,7 @@ public class ChargeJump extends Action {
         }
     }
 
+    @Override
     public void onJump(Player player, Parkourability parkourability) {
         double power = chargeTick / (double) JUMP_MAX_CHARGE_TICK;
         if (power >= 0.5) {
@@ -114,7 +122,8 @@ public class ChargeJump extends Action {
         }
     }
 
-    public void onLand(Player player, Parkourability parkourability) {
+    @Override
+    public void onLand(Player player, Parkourability parkourability, float fallDistance) {
         if (player.isLocalPlayer() && player instanceof LocalPlayer cp) {
             if (
                     parkourability.getActionInfo().can(ChargeJump.class)

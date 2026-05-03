@@ -2,7 +2,7 @@
 id: lesson-phase-2-registry-evolution
 type: lesson
 tags: ["#phase-2", "#registries", "#1.21.11"]
-links: ["[[MOC-lessons]]", "[[task-phase-2-registries]]"]
+links: ["[[MOC-lessons]]", "[[task-phase-2-registries]]", "[[registry-migration]]"]
 ---
 
 # 🎓 Lesson: Registry & API Evolution in 1.21.11

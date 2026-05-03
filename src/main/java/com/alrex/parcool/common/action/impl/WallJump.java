@@ -201,7 +201,21 @@ public class WallJump extends Action {
                 motion.z() + jumpMotion.z()
         );
 
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) {
+            WallJumpAnimationType type = WallJumpAnimationType.fromCode(startData.get(startData.position() - 1));
+            switch (type) {
+                case Back:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.BackwardWallJumpAnimator());
+                    break;
+                case SwingRightArm:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.WallJumpAnimator(true));
+                    break;
+                case SwingLeftArm:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.WallJumpAnimator(false));
+                    break;
+            }
+        }
     }
 
     @Override
@@ -223,7 +237,21 @@ public class WallJump extends Action {
             spawnJumpParticles(player, wallDirection, jumpDirection);
         }
 
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) {
+            WallJumpAnimationType type = WallJumpAnimationType.fromCode(startData.get(startData.position() - 1));
+            switch (type) {
+                case Back:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.BackwardWallJumpAnimator());
+                    break;
+                case SwingRightArm:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.WallJumpAnimator(true));
+                    break;
+                case SwingLeftArm:
+                    animation.setAnimator(new com.alrex.parcool.client.animation.impl.WallJumpAnimator(false));
+                    break;
+            }
+        }
     }
 
     private void spawnJumpParticles(Player player, Vec3 wallDirection, Vec3 jumpDirection) {

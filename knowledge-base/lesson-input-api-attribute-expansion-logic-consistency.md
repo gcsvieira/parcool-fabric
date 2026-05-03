@@ -1,8 +1,8 @@
 ---
-id: lesson-session-7-completion
+id: lesson-input-api-attribute-expansion-logic-consistency
 type: lesson
 tags: ["#porting", "#movement", "#fabric"]
-links: ["[[MOC-lessons]]"]
+links: ["[[MOC-lessons]]", "[[task-phase-4-core-action-loop]]"]
 ---
 
 # 🎓 Lesson: Session 7 - Movement Action Completion

@@ -26,7 +26,9 @@ public class Tap extends Action {
     public void onStartInLocalClient(Player player, Parkourability parkourability, ByteBuffer startData) {
         startRequired = false;
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.TapAnimator());
+        
         parkourability.getBehaviorEnforcer().addMarkerCancellingJump(ID_JUMP_CANCEL, this::isDoing);
     }
 
@@ -34,7 +36,8 @@ public class Tap extends Action {
     public void onStartInOtherClient(Player player, Parkourability parkourability, ByteBuffer startData) {
         startRequired = false;
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.TapAnimator());
     }
 
     @Override

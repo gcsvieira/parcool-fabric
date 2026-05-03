@@ -62,7 +62,18 @@ public class ParCoolConfig {
             SubstituteSprintForFastRun(false),
             EnableJustTimeEffectOfBreakfall(true),
             EnableActionParticlesOfJustTimeBreakfall(true),
-            HideInBlockSneakNeeded(false);
+            HideInBlockSneakNeeded(false),
+            EnableCameraAnimationOfRolling(true),
+            EnableCameraAnimationOfHangDown(true),
+            EnableCameraAnimationOfHWallRun(true),
+            EnableCameraAnimationOfVault(true),
+            EnableLeanAnimationOfFastRun(true),
+            EnableCameraAnimationOfBackWallJump(true),
+            EnableCameraAnimationOfDodge(true),
+            EnableCameraAnimationOfFlipping(true),
+            EnableFallingAnimation(true),
+            EnableAnimation(true),
+            EnableFPVAnimation(true);
 
             private final boolean defaultValue;
 

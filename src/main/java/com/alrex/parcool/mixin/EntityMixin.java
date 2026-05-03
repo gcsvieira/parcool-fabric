@@ -67,44 +67,9 @@ public abstract class EntityMixin implements ForcedPoseAccess {
     @Shadow
     public boolean noPhysics;
 
-    @Inject(method = "getEyeHeight()F", at = @At("HEAD"), cancellable = true)
-    public void onGetEyeHeight(CallbackInfoReturnable<Float> cir) {
-        if (!(((Object) this) instanceof Player player)) {
-            return;
-        }
+    // onGetEyeHeight removed due to potential compatibility issues in 1.21.2+
 
-        /*
-        Parkourability parkourability = Parkourability.get(player);
-        if (parkourability == null) return;
-        HideInBlock ability = parkourability.get(HideInBlock.class);
-        Tuple<BlockPos, BlockPos> area = ability.getHidingArea();
-        if (ability.isDoing() && area != null) {
-            int areaHeight = area.getB().getY() - area.getA().getY() + 1;
-            float eyeHeight = player.getDimensions(Pose.STANDING).height() * 0.85f;
-            if (areaHeight < eyeHeight) {
-                cir.setReturnValue(eyeHeight);
-            } else {
-                cir.setReturnValue(areaHeight + 0.2f);
-            }
-            return;
-        }
-        */
-    }
-
-    @Inject(method = "isInWall", at = @At("HEAD"), cancellable = true)
-    public void onIsInWall(CallbackInfoReturnable<Boolean> cir) {
-        if (!(((Object) this) instanceof Player player)) {
-            return;
-        }
-        /*
-        Parkourability parkourability = Parkourability.get(player);
-        if (parkourability == null) return;
-        HideInBlock hideInBlock = parkourability.get(HideInBlock.class);
-        if (hideInBlock.isDoing() || hideInBlock.getNotDoingTick() < 2) {
-            cir.setReturnValue(false);
-        }
-        */
-    }
+    // onIsInWall removed due to potential compatibility issues
 
     @Inject(method = "move", at = @At("HEAD"), cancellable = true)
     public void onMove(MoverType type, Vec3 pos, CallbackInfo ci) {
@@ -121,21 +86,5 @@ public abstract class EntityMixin implements ForcedPoseAccess {
         }
     }
 
-    @Inject(method = "onGround", at = @At("HEAD"), cancellable = true)
-    public void onOnGround(CallbackInfoReturnable<Boolean> cir) {
-        if (!(((Object) this) instanceof Player player)) {
-            return;
-        }
-        /*
-        Parkourability parkourability = Parkourability.get(player);
-        if (parkourability == null) return;
-        if (parkourability.getAdditionalProperties().isInAirByJumping()) return;
-        if (parkourability.getAdditionalProperties().getActualNotLandingTick() < parkourability.getLimitedValue(
-                ParCoolConfig.Client.Integers.CoyoteTime,
-                ParCoolConfig.Server.Integers.MaxCoyoteTime
-        )) {
-            cir.setReturnValue(true);
-        }
-        */
-    }
+    // onOnGround removed due to potential compatibility issues
 }

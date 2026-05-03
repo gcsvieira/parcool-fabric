@@ -1,1 +1,7 @@
-accessWidener	v1	named
+accessWidener v2 named
+
+# Minecraft
+accessible field net/minecraft/client/Minecraft timer Lnet/minecraft/client/Timer;
+accessible field net/minecraft/client/Timer gameTimeDeltaTicks F
+accessible field net/minecraft/client/Timer partialTick F
+accessible field net/minecraft/world/entity/Entity fallDistance F

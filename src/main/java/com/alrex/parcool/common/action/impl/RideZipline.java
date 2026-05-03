@@ -108,12 +108,14 @@ public class RideZipline extends Action {
         );
         parkourability.getBehaviorEnforcer().addMarkerCancellingSprint(ID_SPRINT_CANCEL, this::isDoing);
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.RideZiplineAnimator());
     }
 
     @Override
     public void onStartInOtherClient(Player player, Parkourability parkourability, ByteBuffer startData) {
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.RideZiplineAnimator());
     }
 
     @Override

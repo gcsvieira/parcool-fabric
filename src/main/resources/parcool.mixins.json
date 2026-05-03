@@ -10,6 +10,13 @@
     "PlayerMixin"
   ],
   "client": [
+    "client.PlayerModelMixin",
+    "client.PlayerRendererMixin",
+    "client.PlayerRenderStateMixin",
+    "client.OptionsMixin",
+    "client.LivingRendererMixin",
+    "client.GameRendererMixin",
+    "client.CameraMixin"
   ],
   "injectors": {
     "defaultRequire": 1

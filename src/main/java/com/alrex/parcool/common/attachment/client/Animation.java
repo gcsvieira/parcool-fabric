@@ -1,17 +1,124 @@
 package com.alrex.parcool.common.attachment.client;
 
+import com.alrex.parcool.api.unstable.animation.AnimationOption;
+import com.alrex.parcool.api.unstable.animation.AnimationPart;
+import com.alrex.parcool.client.animation.Animator;
+import com.alrex.parcool.client.animation.PassiveCustomAnimation;
+import com.alrex.parcool.client.animation.PlayerModelRotator;
+import com.alrex.parcool.client.animation.PlayerModelTransformer;
 import com.alrex.parcool.common.attachment.common.Parkourability;
+import com.alrex.parcool.config.ParCoolConfig;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Player;
 
+import java.util.WeakHashMap;
+
 public class Animation {
-    private static final java.util.WeakHashMap<Player, Animation> INSTANCES = new java.util.WeakHashMap<>();
+    private static final WeakHashMap<Player, Animation> INSTANCES = new WeakHashMap<>();
 
     public static Animation get(Player player) {
         return INSTANCES.computeIfAbsent(player, p -> new Animation());
     }
-    public void tick(AbstractClientPlayer player, Parkourability parkourability) {}
-    public void onRenderTick(Float tickDelta, Player player, Parkourability parkourability) {}
-    public void cameraSetup(net.minecraft.client.Camera camera, LocalPlayer player, Parkourability parkourability) {}
+
+    private Animator animator = null;
+    public Animator getAnimator() {
+        return animator;
+    }
+
+    private AnimationOption option = new AnimationOption();
+    private final PassiveCustomAnimation passiveAnimation = new PassiveCustomAnimation();
+
+    public void setAnimator(Animator animator) {
+        if (!ParCoolConfig.Client.Booleans.EnableAnimation.get()) return;
+        // if (!ParCoolConfig.Client.getInstance().canAnimate(animator.getClass()).get()) return; // TODO: Implement config check
+        this.animator = animator;
+    }
+
+    public boolean animatePre(Player player, PlayerModelTransformer modelTransformer) {
+        Parkourability parkourability = Parkourability.get(player);
+        if (animator != null && animator.shouldRemoved(player, parkourability)) animator = null;
+        if (animator == null) return false;
+        modelTransformer.setOption(option);
+        if (shouldCancelAnimation(player)) return false;
+        return animator.animatePre(player, parkourability, modelTransformer);
+    }
+
+    public void animatePost(Player player, PlayerModelTransformer modelTransformer) {
+        Parkourability parkourability = Parkourability.get(player);
+        if (shouldCancelAnimation(player)) return;
+        if (animator == null) {
+            passiveAnimation.animate(player, parkourability, modelTransformer);
+            return;
+        }
+        animator.animatePost(player, parkourability, modelTransformer);
+    }
+
+    public boolean rotatePre(AbstractClientPlayer player, PlayerModelRotator rotator) {
+        Parkourability parkourability = Parkourability.get(player);
+        if (animator != null && animator.shouldRemoved(player, parkourability)) animator = null;
+        if (animator == null) return false;
+        if (shouldCancelAnimation(player) || option.isCanceled(AnimationPart.ROTATION)) return false;
+        return animator.rotatePre(player, parkourability, rotator);
+    }
+
+    public void rotatePost(AbstractClientPlayer player, PlayerModelRotator rotator) {
+        Parkourability parkourability = Parkourability.get(player);
+        if (shouldCancelAnimation(player) || option.isCanceled(AnimationPart.ROTATION)) return;
+        if (animator == null) {
+            passiveAnimation.rotate(player, parkourability, rotator);
+            return;
+        }
+        animator.rotatePost(player, parkourability, rotator);
+    }
+
+    public void cameraSetup(float tickDelta, net.minecraft.client.Camera camera, LocalPlayer player, Parkourability parkourability) {
+        if (animator == null) {
+            ((com.alrex.parcool.client.data.CameraAccess) camera).parcool$setRoll(0);
+            return;
+        }
+        if (option.isCanceled(AnimationPart.CAMERA)) {
+            ((com.alrex.parcool.client.data.CameraAccess) camera).parcool$setRoll(0);
+            return;
+        }
+        if (animator.shouldRemoved(player, parkourability)) {
+            animator = null;
+            ((com.alrex.parcool.client.data.CameraAccess) camera).parcool$setRoll(0);
+            return;
+        }
+        animator.onCameraSetUp(tickDelta, camera, player, parkourability);
+    }
+
+    public void tick(AbstractClientPlayer player, Parkourability parkourability) {
+        passiveAnimation.tick(player, parkourability);
+        if (animator != null) {
+            animator.tick(player);
+        }
+    }
+
+    public void onRenderTick(float tickDelta, Player player, Parkourability parkourability) {
+        if (animator != null) {
+            animator.onRenderTick(tickDelta, player, parkourability);
+        }
+        // updateAnimationInfo((AbstractClientPlayer) player); // Skip for now
+    }
+
+    public boolean shouldCancelAnimation(Player player) {
+        if (player.isLocalPlayer()
+                && Minecraft.getInstance().options.getCameraType().isFirstPerson()
+                && !ParCoolConfig.Client.Booleans.EnableFPVAnimation.get()
+        ) {
+            return true;
+        }
+        return this.option.isAnimationCanceled();
+    }
+
+    public boolean hasAnimator() {
+        return animator != null;
+    }
+
+    public void removeAnimator() {
+        animator = null;
+    }
 }

@@ -2,7 +2,7 @@
 id: data-attachments
 type: knowledge
 tags: ["#porting", "#data"]
-links: ["[[MOC-porting]]"]
+links: ["[[MOC-porting]]", "[[lesson-data-attachment-stability-hitbox-sync]]"]
 ---
 
 # Data Attachments Migration

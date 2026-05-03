@@ -65,7 +65,10 @@ public class FastSwim extends Action {
 
     @Override
     public void onWorkingTickInClient(Player player, Parkourability parkourability) {
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null && !animation.hasAnimator()) {
+            animation.setAnimator(new com.alrex.parcool.client.animation.impl.FastSwimAnimator());
+        }
     }
 
     @Override

@@ -1,8 +1,8 @@
 ---
-id: lesson-session-4-stability
+id: lesson-data-attachment-stability-hitbox-sync
 type: lesson
 tags: ["#npe", "#config", "#hitbox"]
-links: ["[[MOC-lessons]]"]
+links: ["[[MOC-lessons]]", "[[task-phase-3-data-attachments]]", "[[data-attachments]]"]
 ---
 
 # Session 4 Stability & Infrastructure Lessons

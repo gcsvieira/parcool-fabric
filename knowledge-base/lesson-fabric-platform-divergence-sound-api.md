@@ -1,8 +1,8 @@
 ---
-id: lesson-session-6-mass-porting
+id: lesson-fabric-platform-divergence-sound-api
 type: leaf
 tags: ["#porting", "#mass-actions", "#compilation"]
-links: ["[[MOC-lessons]]"]
+links: ["[[MOC-lessons]]", "[[task-phase-4-core-action-loop]]"]
 ---
 
 # 🏃 Session 6: Mass Action Porting

@@ -76,6 +76,7 @@ public class Dive extends Action {
         );
     }
 
+    @Override
     public void onJump(Player player, Parkourability parkourability) {
         initialYVelocityOfLastJump = player.getDeltaMovement().y();
         justJumped = true;
@@ -86,7 +87,10 @@ public class Dive extends Action {
         double initialYSpeed = startData.getDouble();
         playerYSpeedOld = playerYSpeed = initialYSpeed;
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) {
+            animation.setAnimator(new com.alrex.parcool.client.animation.impl.DiveAnimationHostAnimator(initialYSpeed, BufferUtil.getBoolean(startData)));
+        }
     }
 
     @Override
@@ -94,12 +98,45 @@ public class Dive extends Action {
         double initialYSpeed = startData.getDouble();
         playerYSpeedOld = playerYSpeed = initialYVelocityOfLastJump = initialYSpeed;
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) {
+            animation.setAnimator(new com.alrex.parcool.client.animation.impl.DiveAnimationHostAnimator(initialYSpeed, BufferUtil.getBoolean(startData)));
+        }
     }
 
     @Override
     public StaminaConsumeTiming getStaminaConsumeTiming() {
         return StaminaConsumeTiming.None;
+    }
+
+    @Override
+    public void onStopInLocalClient(Player player) {
+        if (player.isInWater()) {
+            com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+            Parkourability parkourability = Parkourability.get(player);
+            if (animation != null
+                    && parkourability != null
+                    && parkourability.getAdditionalProperties().getNotLandingTick() >= 5
+                    && player.getDeltaMovement().y() < 0
+            ) {
+                animation.setAnimator(new com.alrex.parcool.client.animation.impl.DiveIntoWaterAnimator(parkourability.get(SkyDive.class).isDoing()));
+            }
+        }
+    }
+
+    @Override
+    public void onStopInOtherClient(Player player) {
+        if (player.isInWater()) {
+            com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+            Parkourability parkourability = Parkourability.get(player);
+            if (animation != null
+                    && parkourability != null
+                    && parkourability.getAdditionalProperties().getNotLandingTick() >= 5
+                    && player.getDeltaMovement().y() < 0
+            ) {
+                animation.setAnimator(new com.alrex.parcool.client.animation.impl.DiveIntoWaterAnimator(parkourability.get(SkyDive.class).isDoing()));
+            }
+        }
     }
 
     @Override

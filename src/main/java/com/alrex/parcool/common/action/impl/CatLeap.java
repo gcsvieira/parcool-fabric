@@ -86,7 +86,8 @@ public class CatLeap extends Action {
         Vec3 motionVec = player.getDeltaMovement();
         player.setDeltaMovement(jumpDirection.x(), motionVec.y() * 1.16667, jumpDirection.z());
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.CatLeapAnimator());
     }
 
     @Override
@@ -96,7 +97,8 @@ public class CatLeap extends Action {
             player.playSound(SoundEvents.CATLEAP.value(), 1, 1);
         spawnJumpEffect(player, jumpDirection);
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.CatLeapAnimator());
     }
 
     @Override

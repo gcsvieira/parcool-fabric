@@ -2,7 +2,7 @@
 id: registry-migration
 type: knowledge
 tags: ["#porting", "#registry"]
-links: ["[[MOC-porting]]"]
+links: ["[[MOC-porting]]", "[[lesson-phase-2-registry-evolution]]"]
 ---
 
 # Registry Migration: DeferredRegister → Fabric Registry

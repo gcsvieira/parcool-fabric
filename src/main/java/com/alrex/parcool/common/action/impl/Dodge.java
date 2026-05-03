@@ -120,7 +120,7 @@ public class Dodge extends Action {
 
     @Override
     public void onStartInLocalClient(Player player, Parkourability parkourability, ByteBuffer startData) {
-        startData.getInt(); // skip direction for now
+        DodgeDirection direction = DodgeDirection.values()[startData.getInt()];
         var dodgeVec = new Vec3(startData.getDouble(), 0, startData.getDouble());
         coolTime = getMaxCoolTime(parkourability.getActionInfo());
         if (successivelyCount < getMaxSuccessiveDodge(parkourability.getActionInfo())) {
@@ -138,7 +138,9 @@ public class Dodge extends Action {
         dodgeVec = dodgeVec.scale(0.9 * getSpeedModifier(parkourability.getActionInfo()));
         player.setDeltaMovement(dodgeVec);
 
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.DodgeAnimator(direction));
+
         parkourability.getBehaviorEnforcer().addMarkerCancellingJump(ID_JUMP_CANCEL, this::isDoing);
         if (!ParCoolConfig.Client.Booleans.CanGetOffStepsWhileDodge.get()) {
             parkourability.getBehaviorEnforcer().addMarkerCancellingDescendFromEdge(ID_DESCEND_EDGE, this::isDoing);
@@ -147,8 +149,12 @@ public class Dodge extends Action {
 
     @Override
     public void onStartInOtherClient(Player player, Parkourability parkourability, ByteBuffer startData) {
+        DodgeDirection direction = DodgeDirection.values()[startData.getInt()];
         if (ParCoolConfig.Client.Booleans.EnableActionSounds.get())
             player.playSound(SoundEvents.DODGE.value(), 1f, 1f);
+
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.DodgeAnimator(direction));
     }
 
     public boolean isInSuccessiveCoolDown(ActionInfo info) {

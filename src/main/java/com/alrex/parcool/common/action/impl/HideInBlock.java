@@ -38,6 +38,7 @@ public class HideInBlock extends Action {
     boolean hidingBlockChanged = false;
     boolean keyPressed;
     boolean startedFromDiving;
+    boolean standing;
 
     @Nullable
     public Vec3 getLookDirection() {
@@ -137,7 +138,7 @@ public class HideInBlock extends Action {
 
     @Override
     public void onStart(Player player, Parkourability parkourability, ByteBuffer startData) {
-        boolean _stand = BufferUtil.getBoolean(startData);
+        standing = BufferUtil.getBoolean(startData);
         startedFromDiving = BufferUtil.getBoolean(startData);
         hidingArea = new Tuple<>(BufferUtil.getBlockPos(startData), BufferUtil.getBlockPos(startData));
         hidingPoint = BufferUtil.getVec3(startData);
@@ -158,21 +159,23 @@ public class HideInBlock extends Action {
 
     @Override
     public void onStartInLocalClient(Player player, Parkourability parkourability, ByteBuffer startData) {
-        boolean stand = BufferUtil.getBoolean(startData);
+        BufferUtil.getBoolean(startData); // Skip standing
         RenderBehaviorEnforcer.serMarkerEnforceCameraType(this::isDoing, () -> CameraType.THIRD_PERSON_BACK);
         parkourability.getBehaviorEnforcer().addMarkerCancellingShowName(ID_SHOW_NAME, this::isDoing);
         spawnOnHideParticles(player);
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.HideInBlockAnimator(standing, startedFromDiving));
     }
 
     @Override
     public void onStartInOtherClient(Player player, Parkourability parkourability, ByteBuffer startData) {
-        boolean stand = BufferUtil.getBoolean(startData);
+        BufferUtil.getBoolean(startData); // Skip standing
         parkourability.getBehaviorEnforcer().addMarkerCancellingShowName(ID_SHOW_NAME, this::isDoing);
         spawnOnHideParticles(player);
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.HideInBlockAnimator(standing, startedFromDiving));
     }
 
     @Override

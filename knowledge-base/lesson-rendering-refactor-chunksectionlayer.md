@@ -1,4 +1,5 @@
 ---
+id: lesson-rendering-refactor-chunksectionlayer
 type: lesson
 tags: [rendering, mojmap, chunksectionlayer, rendertype, block-layers, 1.21.11]
 links: ["[[MOC-lessons]]", "[[rendering-and-gui]]"]

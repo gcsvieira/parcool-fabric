@@ -90,7 +90,8 @@ public class ClingToCliff extends Action {
         if (ParCoolConfig.Client.Booleans.EnableActionSounds.get())
             player.playSound(SoundEvents.CLING_TO_CLIFF.value(), 1f, 1f);
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.ClingToCliffAnimator());
     }
 
     @Override
@@ -100,6 +101,9 @@ public class ClingToCliff extends Action {
         armSwingAmount = 0;
         if (ParCoolConfig.Client.Booleans.EnableActionSounds.get())
             player.playSound(SoundEvents.CLING_TO_CLIFF.value(), 1f, 1f);
+        
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.ClingToCliffAnimator());
     }
 
     @Override

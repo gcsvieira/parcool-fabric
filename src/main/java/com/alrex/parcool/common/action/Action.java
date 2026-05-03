@@ -140,6 +140,12 @@ public abstract class Action {
 	public void onRenderTick(Object event, Player player, Parkourability parkourability) {
 	}
 
+    public void onJump(Player player, Parkourability parkourability) {
+    }
+
+    public void onLand(Player player, Parkourability parkourability, float fallDistance) {
+    }
+
 	public void restoreSynchronizedState(ByteBuffer buffer) {
 	}
 

@@ -77,7 +77,8 @@ public class HangDown extends Action {
                 || (hangingBarAxis == BarAxis.Z && Math.abs(bodyVec.z) < Math.abs(bodyVec.x));
         player.setDeltaMovement(0, 0, 0);
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.HangAnimator());
     }
 
     @Override

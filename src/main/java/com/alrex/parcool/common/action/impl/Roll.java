@@ -72,7 +72,9 @@ public class Roll extends Action {
     @Override
     public void onStartInOtherClient(Player player, Parkourability parkourability, ByteBuffer startData) {
         startRequired = false;
-        // Animation system stubbed
+        Direction direction = Direction.values()[startData.getInt()];
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.RollAnimator(direction));
     }
 
     @Override
@@ -94,7 +96,9 @@ public class Roll extends Action {
         }
         player.setDeltaMovement(vec.x(), 0, vec.z());
         
-        // Animation system stubbed
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.RollAnimator(direction));
+
         parkourability.getBehaviorEnforcer().addMarkerCancellingJump(ID_JUMP_CANCEL, this::isDoing);
     }
 

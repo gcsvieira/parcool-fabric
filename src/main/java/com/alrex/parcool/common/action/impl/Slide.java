@@ -54,7 +54,9 @@ public class Slide extends Action {
         if (ParCoolConfig.Client.Booleans.EnableActionSounds.get())
             player.playSound(SoundEvents.SLIDE.value(), 1f, 1f);
         
-        // Animation system stubbed for now
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.SlidingAnimator());
+
         parkourability.getBehaviorEnforcer().addMarkerCancellingJump(ID_JUMP_CANCEL, this::isDoing);
     }
 
@@ -63,6 +65,9 @@ public class Slide extends Action {
         slidingVec = new Vec3(startData.getDouble(), 0, startData.getDouble());
         if (ParCoolConfig.Client.Booleans.EnableActionSounds.get())
             player.playSound(SoundEvents.SLIDE.value(), 1f, 1f);
+
+        com.alrex.parcool.common.attachment.client.Animation animation = com.alrex.parcool.common.attachment.client.Animation.get(player);
+        if (animation != null) animation.setAnimator(new com.alrex.parcool.client.animation.impl.SlidingAnimator());
     }
 
     @Override
